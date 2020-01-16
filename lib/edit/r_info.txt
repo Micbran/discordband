@@ -13240,10 +13240,7 @@ S:BR_MANA | BR_LITE | BR_ELEC | MANA_STORM | HAND_DOOM | S_HI_DRAGON |
 S:BRAIN_SMASH | S_MONSTER | HEAL | BR_DISENCHANT | BA_LITE
 S:DETECT_MONSTERS | BLESS | HEROISM | MAPPING
 O:DROP_PALADIN
-D:Commanding a legion of angels, Raphael will destroy you for your sins. He
-D:will crush you like the pitiful insignificant being he sees you to be.
-D:Your very soul will be taken into judgement by his supreme authority as he
-D:cleanses the world of evil.
+D:The more dickish ninja turtle.
 
 N:770:Habu the Champion of Chaos
 G:h:G
