@@ -7,36 +7,36 @@ Discordband may give you terminal brain worms, make you hate to post, confuse yo
 ### Linux (instructions by Chris Kousky; lightly edited)
 Download and unpack the source archive, or clone the git repository:
 
-  `$ git clone https://github.com/micbran/discordband.git`
+`$ git clone https://github.com/micbran/discordband.git`
 
 Make sure you have the appropriate development packages installed.
 For example, you might run (Ubuntu or Mint):
 
-  `$ sudo apt-get install autoconf gcc libc6-dev libncursesw5-dev libx11-dev`
+`$ sudo apt-get install autoconf gcc libc6-dev libncursesw5-dev libx11-dev`
 
 From the root of the source archive:
- 1. `$ sh autogen.sh`
- 2. `$ ./configure`
- 3. `$ make clean`
- 4. `$ make`
+1. `$ sh autogen.sh`
+2. `$ ./configure`
+3. `$ make clean`
+4. `$ make`
 
 To install, you may need to elevate your credentials:
-  1. `$ su`
-  2. `$ make install`
-  3. `$ exit`
+1. `$ su`
+2. `$ make install`
+3. `$ exit`
 
 Then run discordband as desired:
 
-  `$ discordband -- -n<number of windows>` (for normal ASCII graphics) (recommended)
-  
+`$ discordband -- -n<number of windows>` (for normal ASCII graphics) (recommended)
+
 or
 
-  `$ discordband -g -- -n<# of windows>` (for 8x8 tile graphics)
-  
+`$ discordband -g -- -n<# of windows>` (for 8x8 tile graphics)
+
 If make install fails, or the game does not run properly after make install,
 try bypassing make install and just running the game from root.
 
-You can change game windows' font, location, and size, by environment 
+You can change game windows' font, location, and size, by environment
 variables, for example:
 1. `$ set env ANGBAND_X11_FONT '-*-*-medium-r-normal--24-*-*-*-*-*-iso8859-1'`
 2. `$ discordband -- -n`
@@ -58,7 +58,7 @@ For development, doing an install is undesirable. Try the following instead:
 5. `$ make -j4`
 6. `$ cp src/discordband .`
 7. `$ ASAN_SYMBOLIZER_PATH=/usr/bin/llvm-symbolizer-3.5 ./discordband -g -u<Savefile> -- -n1`
-    
+
 **Note:** Never pass sanitizer flags to CFLAGS as sanitizing configure causes it to fail.
 Instead, configure will append SANITIZE_FLAGS to CFLAGS and LDFLAGS once it has finished
 generating test programs. (see configure.ac)
@@ -75,7 +75,7 @@ how I managed to install better fonts and use them in FrogComposband. I spent ne
 hoping this might prove useful to somebody else. But mostly, it is here to remind me how I did so I don't
 stumble so much next time.
 
-##### 1. Install some better fonts. 
+##### 1. Install some better fonts.
 For example:
 ```bash
 $ sudo apt-get install fonts-liberation
@@ -87,7 +87,7 @@ $ xlsfonts
 ```
 Notice that the new fonts aren't there!
 
-##### 3. Find where the new fonts were installed. 
+##### 3. Find where the new fonts were installed.
 For example:
 ```bash
 $ fc-list | grep liberation
@@ -136,7 +136,7 @@ $ xlsfonts | grep liberation
 ... [and many more]
 ```
 
-##### 6. Now, try to find a font you like. 
+##### 6. Now, try to find a font you like.
 For example:
 ```bash
 $ cd [path to frogcomposband]
@@ -192,7 +192,7 @@ For example, the meaning of the following should now be clear:
 You cannot specify more than 7 child terminals.
 
 ### Windows
-Download the binary archive for Windows.  Unzip it to any location that you 
+Download the binary archive for Windows.  Unzip it to any location that you
 will have full permissions and launch discordband to play.
 
 To compile the source code in MinGW:
@@ -219,7 +219,7 @@ lib/help/html/general.html and the Newbie Guide at lib/help/html/tang.html.
 If you are still stuck, you can usually find friendly people at angband.live
 who will try to help you out.
 
-### Commands 
+### Commands
 
 Again, please refer to the in-game help; press '?' for help and then 'c'
 for Commands. Choose the section that interests you ("Command Descriptions"
