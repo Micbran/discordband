@@ -21744,11 +21744,12 @@ F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | SMART |
 F:DROP_SKELETON | DROP_CORPSE | POS_TELEPATHY
 S:1_IN_6
 S:HASTE | HEAL | BLINK | TELE_SELF | TELE_TO | DARKNESS | TRAPS
-D:Pure evil needs no introduction.
+
 P:Copy:High-Elf:Rogue
 P:Skills:0:0:0:7:0:0:0:0
 P:Life:90
 P:Speed:+15
+D:Chaotic Neutral needs no introduction.
 D:The mere sight of this short, strange man has your vibes feeling checked.
 
 N:1205:The Babbage Analytical Engine
