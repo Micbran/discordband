@@ -1,5 +1,5 @@
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT(FrogComposband, 7.1.chocolate, http://angband.oook.cz)
+AC_INIT(Discordband, 1.0, http://angband.oook.cz)
 AC_CONFIG_SRCDIR(src)
 
 AC_CANONICAL_HOST
@@ -8,7 +8,7 @@ AC_CANONICAL_TARGET
 BUILDSYS_INIT
 BUILDSYS_TOUCH_DEPS
 
-AC_SUBST(PACKAGE, frogcomposband)
+AC_SUBST(PACKAGE, discordband)
 
 AC_CONFIG_HEADERS(src/autoconf.h)
 
@@ -359,7 +359,7 @@ fi
 
 # We are careful not to sanitize the temp programs that configure creates,
 # since there is at least one case where configure generates a memory leak.
-# asan then changes the return value of the process from 0 to 1 causing 
+# asan then changes the return value of the process from 0 to 1 causing
 # configure to fail. But I think we are done with this checking now, so add
 # in the SANITIZE_FLAGS in the appropriate places:
 CFLAGS="${CFLAGS} ${SANITIZE_FLAGS}"
@@ -394,7 +394,7 @@ echo "  var path:                               ${displayedvardatadir}"
 if test "x$wsetgid" = "xyes"; then
     echo "  (as group ${SETEGID})"
 elif test "x$with_private_dirs" = "xyes"; then
-    echo "  (with private save and score files in ~/.angband/FrogComposband/)"
+    echo "  (with private save and score files in ~/.angband/Discordband/)"
 fi
 
 echo
