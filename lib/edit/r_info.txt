@@ -21735,7 +21735,7 @@ D:robes, as he was the day before, when he was burning the enemies
 D:of the Roman Church -- at this moment he is wearing his coarse, old,
 D:monk's cassock."
 
-N:1204:Jack the Ripper
+N:1204:Jake Escobar
 G:p:D
 I:150:80d100:100:120:4:150
 W:90:2:999:50000:0:0
@@ -21756,6 +21756,7 @@ P:Copy:High-Elf:Rogue
 P:Skills:0:0:0:7:0:0:0:0
 P:Life:90
 P:Speed:+15
+D:The mere sight of this short, strange man has your vibes feeling checked.
 
 N:1205:The Babbage Analytical Engine
 G:g:B
