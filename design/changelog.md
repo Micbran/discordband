@@ -5,3 +5,7 @@
 * Jack the Ripper -> Jake Escobar (Description changed)
 * Michael, The Guardian Overlord -> Micbran, the Racist Brandon (Description changed)
 * N:769 Raphael, the Messenger -> (Description changed)
+* N:1304 Zeyphor Mankeli -> (New unique added)
+* N:1305 Kung-fu Yeek From Hell -> (New unique added)
+* N:1306 The Hellraiser -> (New unique added)
+* N:1307 Zu-Aon, Cosmic ICE Agent -> (New unique added)

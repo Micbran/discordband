@@ -23709,6 +23709,98 @@ D:perfectly, down to the last molecule on the flaming sword. You wonder
 D:what mad scientist designed this contraption, and whether he was also
 D:responsible for the Cloning Pits...
 
+N:1304:Zeyphor Mankeli
+G:W:w
+I:125:100d10:20:70:10:170
+W:50:2:999:3000:0:0
+B:HIT:HURT(8d3):DRAIN_EXP(20d6)
+B:HIT:HURT(8d3):LOSE_STR(50%)
+B:HIT:HURT(8d3):LOSE_CON(50%)
+F:MALE | ATTR_MULTI | UNDEAD | EVIL |
+F:FORCE_SLEEP | FORCE_MAXHP | CAN_FLY |
+F:RES_FIRE | RES_COLD | RES_ACID | RES_ELEC | IM_POIS | RES_NETH |
+F:ONLY_ITEM | DROP_90 | DROP_4D2 |
+F:SMART | OPEN_DOOR | BASH_DOOR |
+F:NO_CONF | NO_SLEEP | UNIQUE
+F:POS_HOLD_LIFE | POS_SEE_INVIS
+P:Copy:Vampire:Beastmaster
+S:1_IN_2 |
+S:S_HOUND
+D:The infamous Zeyphor Mankeli has but one response to danger.
+D:You might figure it out.
+
+N:1305:The Kung-Fu Yeek from Hell
+G:y:R
+I:125:36d27:18:24:5
+W:40:4:600:1000
+E:1:1:2:2:1:2
+O:0:0:100:0
+B:KICK:HURT:20d1
+B:HIT:HURT:10d2
+B:KICK:HURT:20d1
+B:HIT:HURT:10d2
+F:FORCE_SLEEP |
+F:DROP_GOOD | DROP_2D2 | UNIQUE | ATTR_ANY |
+F:OPEN_DOOR | BASH_DOOR | RES_POIS | RES_ELEC | RES_SOUND
+F:ANIMAL | EVIL | IM_ACID | DROP_CORPSE | IM_FIRE |
+F:MORTAL | BLUEBAND
+S:1_IN_4 |
+S:BLINK | BLIND | SLOW | S_MONSTER
+D:A small humanoid that radiates hellish power.
+
+N:1306:The Hellraiser
+#i don't even know if this can spawn properly. may need to change flags
+G:x:r
+I:140:300d150:200:200:0
+W:128:4:0:350000
+E:1:1:2:2:1:2
+O:0:0:0:0
+B:HIT:HURT:30d10
+B:HIT:HURT:30d10
+B:GAZE:TIME:10d10
+B:GAZE:INSANITY:8d10
+F:UNIQUE | NONLIVING | EVIL | EMPTY_MIND | NO_FEAR | FORCE_MAXHP
+F:MOVE_BODY | KILL_WALL | IM_FIRE | IM_ELEC | IM_POIS | IM_ACID | REFLECTING
+F:HAS_LITE | RES_NETH | RES_WATE | RES_NEXU | RES_CHAOS | NO_STUN | REGENERATE
+F:ONLY_ITEM | DROP_4D2 | DROP_3D2 | DROP_2D2 | DROP_GOOD | RES_SOUND | RES_DARK
+F:DROP_GREAT | DROP_CHOSEN | NO_CONF | NO_SLEEP | NO_CUT | CAN_FLY | POWERFUL
+F:KILL_ITEM | HAS_LITE | BASH_DOOR | BLUEBAND | RES_MANA | IM_COLD | ATTR_ANY
+S:1_IN_3
+S:BR_DISI | BR_MANA | BR_CHAO | SHRIEK | BA_MANA |
+S:S_HI_DEMONS | S_HI_UNDEAD | S_HI_DRAGONS
+D:A remotely humanoid creature with four arms ending in claws and a demonic
+D:head with its facial features unchanging, making it seem much like a golem.
+D:Awakened on the hell forge, the body is gleaming in tones of dark red as
+D:heated iron. Imbued by corrupt magic to call forth ultimate terror, its
+D:gaze will sap your life forces and make you lose all grip on sanity.
+
+N:1307:Zu-Aon, the Cosmic ICE Agent
+#i don't even know if this can spawn properly. may need to change flags
+G:N:b
+I:145:300d200:200:200:0
+W:128:1:0:1000000
+E:0:1:0:0:1:0
+O:0:0:0:0
+B:HIT:HURT:70d5
+B:HIT:HURT:70d5
+B:GAZE:INSANITY:5d5
+F:UNIQUE | NONLIVING | NO_FEAR | FORCE_MAXHP | REFLECTING | SMART
+F:MOVE_BODY | KILL_WALL | IM_FIRE | IM_ELEC | IM_POIS | IM_ACID | IM_COLD
+F:RES_NETH | RES_WATE | RES_NEXU | RES_CHAOS | NO_STUN | REGENERATE
+F:ONLY_ITEM | DROP_4D2 | DROP_3D2 | DROP_2D2 | DROP_1D2 | DROP_GOOD | DROP_GREAT
+F:NO_CONF | NO_SLEEP | CAN_FLY | POWERFUL | COLD_BLOOD | ATTR_ANY | DROP_CHOSEN
+F:KILL_ITEM | EMPTY_MIND | COLD_BLOOD | BASH_DOOR | BLUEBAND | NO_CUT
+F:RES_MANA | RES_LITE | RES_DARK | RES_SOUND | RES_TIME | GENO_NO_THIN
+S:1_IN_4
+S:BA_NETH | HEAL | TELE_TO | BA_MANA
+D:Guarding the border between outer dimensions and the mundane cosmos
+D:this being has a clear mission. Its patience seems to be infinite,
+D:and its appearance doesn't reveal if this creature is actually alive
+D:or some sort of construct or non-living avatar. Its powers seem to be
+D:great enough to even hold back banished gods, and while its assignment
+D:probably lasts a cosmos' lifetime, its paycheck remains unknown.
+D:Also it is definitely racist.
+
 # N: serial number : monster name
 # G: symbol : color
 # I: speed : hit points : vision : armor class : alertness : weight (lbs)
