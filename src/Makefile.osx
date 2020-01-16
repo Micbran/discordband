@@ -11,7 +11,7 @@ LD = ld
 OPT ?= -O2
 
 # the CFBundleExecutable plist value is used within the app, so we want it to match the bundle name to make everything look right
-NAME = FrogComposband
+NAME = Discordband
 APPNAME = $(NAME).app
 EXE = $(NAME)
 
@@ -35,7 +35,7 @@ DEPLOYMENT_TARGET = MACOSX_DEPLOYMENT_TARGET=10.5
 # and build flags in "./config"
 -include config
 
-# -DALLOW_BORG is required for all .o files in a borg build 
+# -DALLOW_BORG is required for all .o files in a borg build
 ifneq (,$(findstring borg, $(MAKECMDGOALS)))
 CFLAGS += -DALLOW_BORG
 endif
@@ -66,10 +66,10 @@ $(EXE).o: $(OBJS)
 	@$(LD) -r -arch x86_64 -o $@.x86_64 $(OBJS)
 	@printf "%10s %-20s\n" LD $@.i386
 	@$(LD) -r -arch i386 -o $@.i386 $(OBJS)
-	lipo -arch x86_64 $@.x86_64 -arch i386 $@.i386 -create -output frogcomposband.o
+	lipo -arch x86_64 $@.x86_64 -arch i386 $@.i386 -create -output discordband.o
 
 $(EXE): $(EXE).o $(OSX_OBJS)
-	$(DEPLOYMENT_TARGET) $(CC) $(CFLAGS) $(LDFLAGS) -o $(EXE) $(EXE).o $(OSX_OBJS) $(LIBS) 
+	$(DEPLOYMENT_TARGET) $(CC) $(CFLAGS) $(LDFLAGS) -o $(EXE) $(EXE).o $(OSX_OBJS) $(LIBS)
 
 #
 # Clean up old junk
@@ -133,7 +133,7 @@ install: $(EXE) $(ICONFILES) $(PLIST) $(LIBFILES)
 	@mkdir -p $(APPCONT)
 	@mkdir -p $(APPBIN)
 	@mkdir -p $(APPRES)
-	@mkdir -p $(APPRES)/English.lproj/MainMenu.nib 
+	@mkdir -p $(APPRES)/English.lproj/MainMenu.nib
 	@mkdir -p $(APPRES)/lib/data
 	@mkdir -p $(APPRES)/lib/edit
 	@mkdir -p $(APPRES)/lib/file
@@ -221,5 +221,3 @@ test-clean:
 
 depend:
 	makedepend -D__MAKEDEPEND__ $(SRCS)
-
-

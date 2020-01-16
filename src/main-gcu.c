@@ -1257,7 +1257,7 @@ static errr term_data_init(term_data *td)
 
    assert(td->r.x + td->r.cx <= COLS);
    assert(td->r.y + td->r.cy <= LINES);
-   
+
    /* Create a window */
    td->win = newwin(td->r.cy, td->r.cx, td->r.y, td->r.x);
 
@@ -1503,13 +1503,13 @@ errr init_gcu(int argc, char *argv[])
       space.
 
       Examples:
-        frogcomposband -mgcu -- -right 30x27,* -bottom *x7 will layout as
+        discordband -mgcu -- -right 30x27,* -bottom *x7 will layout as
 
         Term-0: Map (COLS-30)x(LINES-7) | Term-1: 30x27
         --------------------------------|----------------------
         <----Term-3: (COLS-30)x7------->| Term-2: 30x(LINES-27)
 
-        frogcomposband -mgcu -- -bottom *x7 -right 30x27,* will layout as
+        discordband -mgcu -- -bottom *x7 -right 30x27,* will layout as
 
         Term-0: Map (COLS-30)x(LINES-7) | Term-2: 30x27
                                         |------------------------------
@@ -1569,7 +1569,7 @@ errr init_gcu(int argc, char *argv[])
                 remaining.cx -= spacer_cx;
                 if (left)
                     remaining.x += spacer_cx;
-                
+
                 tmp++;
                 ct = _parse_size_list(tmp, cys, MAX_TERM_DATA);
                 for (j = 0; j < ct; j++)
@@ -1581,7 +1581,7 @@ errr init_gcu(int argc, char *argv[])
                         quit(format("Too many terminals. Only %d are allowed.", MAX_TERM_DATA));
                     if (cy <= 0)
                     {
-                        quit(format("Out of bounds in -%s: %d is too large (%d rows max for this strip)", 
+                        quit(format("Out of bounds in -%s: %d is too large (%d rows max for this strip)",
                             left ? "left" : "right", cys[j], remaining.cy));
                     }
                     data[next_term++].r = rect(x, y, cx, cy);
@@ -1622,7 +1622,7 @@ errr init_gcu(int argc, char *argv[])
                 remaining.cy -= spacer_cy;
                 if (top)
                     remaining.y += spacer_cy;
-                
+
                 tmp++;
                 for (j = 0; j < ct; j++)
                 {
@@ -1633,7 +1633,7 @@ errr init_gcu(int argc, char *argv[])
                         quit(format("Too many terminals. Only %d are allowed.", MAX_TERM_DATA));
                     if (cx <= 0)
                     {
-                        quit(format("Out of bounds in -%s: %d is too large (%d cols max for this strip)", 
+                        quit(format("Out of bounds in -%s: %d is too large (%d cols max for this strip)",
                             top ? "top" : "bottom", cxs[j], remaining.cx));
                     }
                     data[next_term++].r = rect(x, y, cx, cy);
@@ -1645,7 +1645,7 @@ errr init_gcu(int argc, char *argv[])
 
         /* Map Terminal */
         if (remaining.cx < MAP_MIN_CX || remaining.cy < MAP_MIN_CY)
-            quit(format("Failed: FrogComposband needs an %dx%d map screen, not %dx%d", MAP_MIN_CX, MAP_MIN_CY, remaining.cx, remaining.cy));
+            quit(format("Failed: Discordband needs an %dx%d map screen, not %dx%d", MAP_MIN_CX, MAP_MIN_CY, remaining.cx, remaining.cy));
         data[0].r = remaining;
         term_data_init(&data[0]);
         angband_term[0] = Term;
@@ -1675,5 +1675,3 @@ errr init_gcu(int argc, char *argv[])
 
 
 #endif /* USE_GCU */
-
-

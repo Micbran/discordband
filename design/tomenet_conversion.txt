@@ -1,0 +1,9 @@
+- Missing weight (lbs) field in I definition
+- Missing next_exp and next_mon field in W definition (usually :0:0 will suffice)
+- E field doesn't exist in Discordband, can be deleted.
+- O field doesn't exist in Discordband, can be deleted.
+- B field syntax is fairly different in Discordband.
+- Some flags in the F field don't translate well.
+  * RES_SOUND
+  * MORTAL
+  * BLUEBAND

@@ -240,8 +240,8 @@ pip-log.txt
 
 # Build output
 *.o
-/src/frogcomposband
-/frogcomposband
+/src/Discordband
+/discordband
 /src/tags
 
 # Temporary (cache) files built during run-time

@@ -2330,7 +2330,7 @@ bool show_file(bool show_version, cptr name, cptr what, int line, int mode)
         if (show_version)
         {
             prt(format(
-                "[FrogComposband %d.%d.%s, %s, Line %d/%d]",
+                "[Discordband %d.%d.%s, %s, Line %d/%d]",
                VER_MAJOR, VER_MINOR, VER_PATCH,
                caption, line, size), 0, 0);
         }
@@ -3303,7 +3303,7 @@ bool check_score(void)
         return FALSE;
     }
 
-    /* Quitter 
+    /* Quitter
     if (!p_ptr->total_winner && streq(p_ptr->died_from, "Quitting"))
 
     {

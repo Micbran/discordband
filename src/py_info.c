@@ -63,13 +63,13 @@ static void _build_general1(doc_ptr doc)
         while (!ok_name)
         {
             paikka = strpos(",", nimi);
-            if (paikka) 
+            if (paikka)
             {
                 nimi[paikka - 1] = '\0';
                 break;
             }
             paikka = strpos(" the ", nimi);
-            if (paikka) 
+            if (paikka)
             {
                 nimi[paikka - 1] = '\0';
                 break;
@@ -81,7 +81,7 @@ static void _build_general1(doc_ptr doc)
                 break;
             }
             paikka = strpos(" of ", nimi);
-            if (paikka) 
+            if (paikka)
             {
                 nimi[paikka - 1] = '\0';
                 break;
@@ -1367,11 +1367,11 @@ static void _build_uniques(doc_ptr doc)
 static void _build_virtues(doc_ptr doc)
 {
     if (enable_virtues)
-    {	
+    {
         doc_printf(doc, "<topic:Virtues>=================================== <color:keypress>V</color>irtues ===================================\n\n");
         virtue_display(doc);
         doc_newline(doc);
-    }	
+    }
 }
 
 static void _build_mutations(doc_ptr doc)
@@ -1447,7 +1447,7 @@ static void _build_allies(doc_ptr doc)
         if (!(r_ptr->flags1 & RF1_UNIQUE)) continue;
         if (!unique_is_friend(i)) continue;
         vec_add(v, r_ptr);
-        ally_counter++; 
+        ally_counter++;
         if (r_ptr->flags7 & RF7_GUARDIAN)
         {
             int j;
@@ -1714,7 +1714,7 @@ static bool _kind_is_other(int k_idx) {
       || _kind_is_spellbook(k_idx)
       || tval == TV_SHOT
       || tval == TV_ARROW
-      || tval == TV_BOLT 
+      || tval == TV_BOLT
       || tval == TV_CHEST )
     {
         return TRUE;
@@ -1990,7 +1990,7 @@ static void _build_mon_spell_stats(doc_ptr doc, cptr heading, mon_race_p filter)
     doc_printf(doc, "  <color:G>%-20.20s Count   Pct</color>\n", heading);
     _spell_count_imp(doc, "Observed", ct_spell_moves, ct_total_moves);
     expected_freq = (double)total_freq/(ct_total_moves * 100.0);
-    expected_spells = ct_total_moves * expected_freq; 
+    expected_spells = ct_total_moves * expected_freq;
     doc_printf(doc, "  %-20.20s %5d %5.1f%%\n", "Expected", expected_spells, expected_freq * 100.0);
     _spell_count_imp(doc, "Failures", ct_spell_moves - ct_spells, ct_spell_moves);
     _spell_count_imp(doc, "Summon", allocation[MST_SUMMON], ct_spell_moves);
@@ -2454,7 +2454,7 @@ static void _build_messages(doc_ptr doc)
 static cptr _game_mode_text[GAME_MODE_MAX] = {
     "<color:G>Beginner</color>",
     "Normal",
-    "XXX", 
+    "XXX",
     "<color:r>Monster</color>"
 };
 static void _build_options(doc_ptr doc)
@@ -2490,7 +2490,7 @@ static void _build_options(doc_ptr doc)
 
 	if (easy_id)
 		doc_printf(doc, " Easy Identify:      On\n");
-	
+
 	if (easy_lore)
 		doc_printf(doc, " Easy Lore:          On\n");
 
@@ -2668,7 +2668,7 @@ void py_display_character_sheet(doc_ptr doc)
 {
     _add_html_header(doc);
 
-    doc_insert(doc, "<style:wide>  [FrogComposband <$:version> Character Dump]\n");
+    doc_insert(doc, "<style:wide>  [Discordband <$:version> Character Dump]\n");
     if (p_ptr->total_winner)
         doc_insert(doc, "              <color:B>***WINNER***</color>\n");
     else if (p_ptr->is_dead)

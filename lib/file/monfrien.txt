@@ -578,6 +578,12 @@ says, "Don't you monkey with the monkey!"
 munches on a banana.
 says, "Hear no evil, see no evil, speak no evil."
 
+N:1204:Jake Escobar
+says, 'JJ "Israel" the Slayer, Agent of Chaos, at your service! For now.'
+whines, 'Hurry up! I've a coup on the bastard mayor of Thalos to attend in an hour!'
+says, 'They always ask me if I do poison but never ask how my poison is doing.'
+slips away for a second or two.
+
 N:1225:Justshorn, Sorcerer-King of the Sheeple
 yells, 'THE TIME HAS COME FOR THE MEEK TO INHERIT!'
 claims the Amulet of Oretna is his by right.

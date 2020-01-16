@@ -649,8 +649,9 @@ says, 'A monkey cannot be a human! You are a monkey for this Dio!!'
 shouts, 'WRYYYYYYYYY!!!!!!'
 says, 'You came here to die in vain!'
 says, 'You think that you have a little possibilities that you defeat me? You are dull fish!'
-says, 'You thought it was an oversized energy vortex, but it was me, Dio!'
+says, 'You thought it was a normal oriental vampire, but it was me, Dio!'
 says, 'How many people I killed? Do you remember the amount of bread you ate?'
+says, 'Do you believe in "gravity"?'
 
 N:880:Wong
 says, 'I knew that you come'
@@ -764,6 +765,14 @@ says, "Monkey see, monkey do!"
 says, "Don't you monkey with the monkey!"
 munches on a banana.
 says, "Hear no evil, see no evil, speak no evil."
+
+N:1204:Jake Escobar
+reaches out toward you with his hand.
+says, 'Did you know even with seat belts people die all the time in car crashes? I thought that was interesting.'
+says, 'Isn't it strange how one person can kill a hundred but one person can't die a hundred deaths?'
+is silently judging you for all your crimes.
+says, 'Once, someone said I looked yung and could be indoctrinated into supremacy. Do you know where he is now?' and then breaks out into laughter.
+says, 'I'll use these tools society gave me to dismantle society and give everyone a fair share!'
 
 N:1225:Justshorn, Sorcerer-King of the Sheeple
 yells, 'THE TIME HAS COME FOR THE MEEK TO INHERIT!'
