@@ -23740,7 +23740,7 @@ B:KICK:HURT(20d1):STUN(2d3, 50%)
 B:HIT:HURT(10d2):STUN(2d3, 50%)
 F:FORCE_SLEEP |
 F:DROP_GOOD | DROP_2D2 | UNIQUE | ATTR_ANY |
-F:OPEN_DOOR | BASH_DOOR | RES_POIS | RES_ELEC | 
+F:OPEN_DOOR | BASH_DOOR | RES_POIS | RES_ELEC |
 F:ANIMAL | EVIL | IM_ACID | DROP_CORPSE | IM_FIRE
 S:1_IN_4 |
 S:BLINK | BLIND | SLOW | S_MONSTER
@@ -23749,10 +23749,8 @@ D:A small humanoid that radiates hellish power.
 N:1306:The Hellraiser
 #i don't even know if this can spawn properly. may need to change flags
 G:x:r
-I:140:300d150:200:200:0
-W:128:4:0:350000
-E:1:1:2:2:1:2
-O:0:0:0:0
+I:140:300d150:200:200:0:1000
+W:128:4:0:350000:0:0
 B:HIT:HURT:30d10
 B:HIT:HURT:30d10
 B:GAZE:TIME:10d10
@@ -23775,10 +23773,8 @@ D:gaze will sap your life forces and make you lose all grip on sanity.
 N:1307:Zu-Aon, the Cosmic ICE Agent
 #i don't even know if this can spawn properly. may need to change flags
 G:N:b
-I:145:300d200:200:200:0
-W:128:1:0:1000000
-E:0:1:0:0:1:0
-O:0:0:0:0
+I:145:300d200:200:200:0:10000
+W:128:1:0:1000000:0:0
 B:HIT:HURT:70d5
 B:HIT:HURT:70d5
 B:GAZE:INSANITY:5d5
