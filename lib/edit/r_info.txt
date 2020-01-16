@@ -21202,7 +21202,7 @@ D:their balance. Its aura is pure beyond expression, its eyes reflect supreme
 D:laws beyond comprehension, daring to look at it will drive you insane,
 D:let alone fighting it!
 
-N:1179:Michael, the Guardian Overlord
+N:1179:Micbran, the Racist Brandon
 G:A:U
 I:130:69d199:100:175:255:255
 W:98:3:999:77777:0:0
@@ -21223,12 +21223,8 @@ S:1_IN_3 |
 S:TELE_TO | BR_MANA | BR_DISENCHANT | BR_CONF | S_ANGEL | S_MONSTER
 S:BA_LITE | BO_MANA | BO_WATER | BRAIN_SMASH |
 S:HASTE | HEAL | ANTI_MAGIC | DRAIN_MANA
-D:Through many succeeding cycles of time, as ray after ray provided the pathway
-D:for the descent of new spirits, lord Michael has remained as the guardian
-D:overlord of the angelic host, the elemental kingdom and humanity. He shall
-D:not fold his cosmic wings about him to return home until the final angelic
-D:being is freed, the last man is redeemed and the last elemental returned to
-D:its perfect state.
+D:Protector of Reisner, banner of the fiend Psylo, Micbran Brandon has gone
+D:mad after his racist secrets were made public
 
 N:1180:Tik'srvzllat
 G:G:v
