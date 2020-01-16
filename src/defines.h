@@ -13,12 +13,12 @@
 /*
  * Name of the version/variant
  */
-#define VERSION_NAME "FrogComposband"
+#define VERSION_NAME "Discordband"
 
 
-#define VER_MAJOR 7
-#define VER_MINOR 1
-#define VER_PATCH "liquorice"
+#define VER_MAJOR 1
+#define VER_MINOR 0
+#define VER_PATCH 0
 #define VER_EXTRA 0
 #define VERSION_IS_DEVELOPMENT (TRUE)
 
@@ -3115,7 +3115,7 @@ enum obj_flags_e {
 /*
  * New monster blow effects
  * Note: monster blows can either use one of
- * the following, or they can directly use a 
+ * the following, or they can directly use a
  * GF_* effect code. Assert GF_COUNT < 5000.
  */
 enum {
@@ -5966,11 +5966,11 @@ enum {
     ORIGIN_ARENA_REWARD,        /* an arena reward */
     ORIGIN_NAGA,                /* a gift from Spiritnaga & Co. */
     ORIGIN_PATTERN,             /* reward for walking the pattern */
-    ORIGIN_PLAYER_MADE,         /* player-made item */ 
-    ORIGIN_ART_CREATION,        /* created by scroll of art creation */ 
-    ORIGIN_REFORGE,             /* reforge */ 
-    ORIGIN_GAMBLE,              /* gamble */ 
-    ORIGIN_WANTED,              /* reward for turning in a wanted monster */ 
+    ORIGIN_PLAYER_MADE,         /* player-made item */
+    ORIGIN_ART_CREATION,        /* created by scroll of art creation */
+    ORIGIN_REFORGE,             /* reforge */
+    ORIGIN_GAMBLE,              /* gamble */
+    ORIGIN_WANTED,              /* reward for turning in a wanted monster */
     ORIGIN_PATRON,              /* reward from your chaos patron */
     ORIGIN_ENDLESS,             /* created by an endless quiver */
     ORIGIN_PHOTO,               /* taken with a camera */

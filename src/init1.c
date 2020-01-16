@@ -1111,7 +1111,7 @@ static bool _is_d_char(const char *token)
 
 /* this is almost strip_name_aux ... but I want to support
  * partial matches (e.g. EGO(speed) to match 'of Speed' and
- * EGO(pattern) to match '(Pattern)' (Note: EGO((Pattern)) 
+ * EGO(pattern) to match '(Pattern)' (Note: EGO((Pattern))
  * would sadly confuse our parser ...) Also, MON(raal's)
  * rather than MON(raal's tome of destruction) will keep
  * my fingers happy. */
@@ -1261,7 +1261,7 @@ parse_tbl_ptr summon_type_parse(cptr token)
 {
     return parse_tbl_parse(_summon_type_tbl, token);
 }
-        
+
 parse_tbl_ptr summon_type_lookup(int id)
 {
     return parse_tbl_lookup(_summon_type_tbl, id);
@@ -1725,7 +1725,7 @@ static errr _parse_room_grid_object(char **args, int arg_ct, room_grid_ptr grid,
    OBJ(CLOAK, DEPTH+20):EGO(*)   Any ego cloak generated 20 levels OoD
    OBJ(RING, DEPTH+50):EGO(speed) Ring of Speed generated 50 level OoD
    OBJ(SWORD):EGO(pattern)       A pattern blade
-*/   
+*/
 static errr _parse_room_grid_ego(char **args, int arg_ct, room_grid_ptr grid, int options)
 {
     switch (arg_ct)
@@ -3768,7 +3768,7 @@ static errr parse_mon_blow(char *buf, mon_blow_ptr blow)
             char arg[100], sentinel = '~', check;
             /* sscanf tricks learned from vanilla ... */
             sprintf(arg, "%s%c", args[j], sentinel);
-            
+
             if (2 == sscanf(arg, "%d%%%c", &pct, &check) && check == sentinel)
                 effect->pct = MAX(0, MIN(100, pct));
             else if (3 == sscanf(arg, "%dd%d%c", &dd, &ds, &check) && check == sentinel)
@@ -3837,7 +3837,7 @@ static errr parse_mon_auras(char *buf, mon_race_ptr r_ptr)
             char arg[100], sentinel = '~', check;
             /* sscanf tricks learned from vanilla ... */
             sprintf(arg, "%s%c", args[j], sentinel);
-            
+
             if (2 == sscanf(arg, "%d%%%c", &pct, &check) && check == sentinel)
                 aura->pct = MAX(0, MIN(100, pct));
             else if (3 == sscanf(arg, "%dd%d%c", &dd, &ds, &check) && check == sentinel)
@@ -3881,7 +3881,7 @@ static errr parse_mon_flags(char *buf, mon_race_ptr race)
                 char arg[100], sentinel = '~', check;
                 int  dd, ds, pct;
                 sprintf(arg, "%s%c", args[j], sentinel);
-                
+
                 if (2 == sscanf(arg, "%d%%%c", &pct, &check) && check == sentinel)
                     race->pack_pct = MAX(0, MIN(100, pct));
                 else if (3 == sscanf(arg, "%dd%d%c", &dd, &ds, &check) && check == sentinel)
@@ -4713,22 +4713,22 @@ errr parse_room_line(room_ptr room, char *line, int options)
         memset(letter, 0, sizeof(room_grid_t));
         letter->letter = line[2];
         rc = parse_room_grid(line + 4, letter, options);
-        if (!rc) 
+        if (!rc)
         {
-        /* Check for the following case: a quest line is edited during the game, 
+        /* Check for the following case: a quest line is edited during the game,
          * and the player has already requested or completed a quest that happens
          * later in the new line without having requested, completed or received a
          * reward for an earlier quest. This can make either a quest reward or an
          * entire quest inaccessible. To avoid this, we use a very ugly hack:
          * buildings set to an Untaken quest or a Completed quest (meaning an
-         * unrewarded one) can only be overwritten by setting them to another 
+         * unrewarded one) can only be overwritten by setting them to another
          * Completed quest. (We allow that so that a player who completes the
          * later quest first can receive the reward immediately, without having to
          * take the earlier quest.) */
             if ((letter->cave_feat >= 128) && (letter->cave_feat < 160))
             {
                 room_grid_ptr old_grid = int_map_find(room->letters, letter->letter);
-                while ((old_grid) && (old_grid->extra > 0) && (old_grid->cave_feat == letter->cave_feat) 
+                while ((old_grid) && (old_grid->extra > 0) && (old_grid->cave_feat == letter->cave_feat)
                       && (old_grid->extra != letter->extra))
                 {
                     quest_ptr q = quests_get(old_grid->extra);
@@ -4737,7 +4737,7 @@ errr parse_room_line(room_ptr room, char *line, int options)
                     {
                         if (letter->extra < 1) letter->extra = old_grid->extra;
                         else {
-                            quest_ptr q2 = quests_get(letter->extra);   
+                            quest_ptr q2 = quests_get(letter->extra);
                             if (!q2 || !q2->id) letter->extra = old_grid->extra;
                             else if (q2->status != QS_COMPLETED) letter->extra = old_grid->extra;
                         }
@@ -4874,7 +4874,7 @@ static errr process_dungeon_file_aux(char *buf, int options)
 
 
 static char tmp[255];
-static cptr variant_name = "FROGCOMPOSBAND";
+static cptr variant_name = "DISCORDBAND";
 
 /*
  * Helper function for "process_dungeon_file()"
@@ -5362,5 +5362,3 @@ errr parse_edit_file(cptr name, parser_f parser, int options)
     my_fclose(fp);
     return err;
 }
-
-

@@ -69,7 +69,7 @@ static int _count(int ids[]);
 
 /************************************************************************
  * Public Entrypoints
- ***********************************************************************/ 
+ ***********************************************************************/
 int py_birth(void)
 {
     int result = UI_OK;
@@ -197,8 +197,8 @@ void py_birth_spellbooks(void)
 }
 
 /************************************************************************
- * Welcome to FrogComposband!
- ***********************************************************************/ 
+ * Welcome to Discordband!
+ ***********************************************************************/
 static void _set_mode(int mode);
 static bool _stats_changed = FALSE;
 
@@ -216,13 +216,13 @@ static int _welcome_ui(void)
         doc_clear(_doc);
 
         doc_insert(_doc,
-            "Welcome to <color:keyword>FrogComposband</color>, a dungeon exploration "
+            "Welcome to <color:keyword>Discordband</color>, a dungeon exploration "
             "role playing game. Your goal is to defeat the dreaded <color:keyword>"
             "Serpent of Chaos</color>, but before you can face it, you must battle "
             "many foes. Your first step is to create a character for this quest. "
             "The following screens will guide you through this process so that you "
             "may quickly begin playing. You can get general help at any time by "
-            "pressing <color:keypress>?</color>.\n\n"
+            "pressing <color:keypress>?</color>.\n\n" // TODO change this
         );
 
         doc_insert(_doc,
@@ -272,7 +272,7 @@ static int _welcome_ui(void)
             p_ptr->realm1 = previous_char.realm1;
             p_ptr->realm2 = previous_char.realm2;
             p_ptr->dragon_realm = previous_char.dragon_realm;
-            p_ptr->au = previous_char.au;            
+            p_ptr->au = previous_char.au;
             for (i = 0; i < MAX_STATS; i++)
             {
                 p_ptr->stat_cur[i] = previous_char.stat_max[i];
@@ -389,7 +389,7 @@ static void _set_mode(int mode)
  * race, class and personality, and that throughout the birth process
  * these fields remain legal. Currently, player_wipe gives an Ordinary
  * Human Warrior to start.
- ***********************************************************************/ 
+ ***********************************************************************/
 static void _race_class_top(doc_ptr doc);
 static void _inc_rcp_state(void);
 static void _change_name(void);
@@ -590,7 +590,7 @@ static int _race_class_ui(void)
 
 /************************************************************************
  * 2.1) Personality
- ***********************************************************************/ 
+ ***********************************************************************/
 static vec_ptr _pers_choices(bool split);
 
 static void _split_pers_ui(byte _old)
@@ -798,7 +798,7 @@ static vec_ptr _pers_choices(bool split)
 
 /************************************************************************
  * 2.2) Race
- ***********************************************************************/ 
+ ***********************************************************************/
 static vec_ptr _get_races_aux(int ids[]);
 static bool _is_valid_race_class(int race_id, int class_id);
 
@@ -1004,7 +1004,7 @@ static bool _is_valid_race_class(int race_id, int class_id)
 
 /************************************************************************
  * 2.2.1) Subrace
- ***********************************************************************/ 
+ ***********************************************************************/
 static int _subrace_ui(void)
 {
     if (p_ptr->prace == RACE_DEMIGOD)
@@ -1096,7 +1096,7 @@ static int _draconian_ui(void)
 
 /************************************************************************
  * 2.3) Class
- ***********************************************************************/ 
+ ***********************************************************************/
 static vec_ptr _get_classes_aux(int ids[])
 {
     vec_ptr v = vec_alloc(NULL);
@@ -1288,7 +1288,7 @@ static int _class_ui(int ids[])
 
 /************************************************************************
  * 2.3.1) Subclass
- ***********************************************************************/ 
+ ***********************************************************************/
 static int _subclass_ui(void)
 {
     for (;;)
@@ -1588,7 +1588,7 @@ static int _patron_ui(void)
 
 /************************************************************************
  * 2.3.2) Magic
- ***********************************************************************/ 
+ ***********************************************************************/
 static int _realm1_ui(void)
 {
     u32b bits = realm_choices1[p_ptr->pclass];
@@ -1750,7 +1750,7 @@ static int _realm2_ui(void)
 
 /************************************************************************
  * 2.2') Monster Race (Replaces 2.2.* path when in monster mode)
- ***********************************************************************/ 
+ ***********************************************************************/
 
 #define _MAX_MON_RACE_GROUPS      12
 static _race_group_t _mon_race_groups[_MAX_MON_RACE_GROUPS] = {
@@ -2088,7 +2088,7 @@ static int _mon_troll_ui(void)
 
 /************************************************************************
  * 3) Stats
- ***********************************************************************/ 
+ ***********************************************************************/
 
 static int _stat_points[18] =
 { 0, 0, 0,
@@ -2558,7 +2558,7 @@ static int _stats_score(void)
 
 /************************************************************************
  * Low level utilities
- ***********************************************************************/ 
+ ***********************************************************************/
 /* The UI is organized as follows:
     <player fields> | <info panel>
    -----------------------------------
@@ -2727,7 +2727,7 @@ static void _race_class_info(doc_ptr doc)
     personality_ptr pers_ptr = get_personality();
     dragon_realm_ptr realm_ptr = dragon_get_realm(p_ptr->dragon_realm); /* 0 is OK */
     int spell_stat = get_spell_stat();
-    
+
     if (_rcp_state == _RCP_STATS)
     {
         s16b stats[MAX_STATS] = {0};
@@ -3178,4 +3178,3 @@ static void _birth_finalize(void)
     p_ptr->csp = p_ptr->msp;
     process_player_name(FALSE);
 }
-

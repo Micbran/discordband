@@ -356,7 +356,7 @@ void toggle_easy_mimics(bool kayta)
             {
                 if (kayta) r_ptr->x_attr = color_char_to_attr('D');
                 else r_ptr->x_attr = color_char_to_attr('d');
-            } 
+            }
         }
     }
 }
@@ -1423,7 +1423,7 @@ void do_cmd_options(void)
         Term_clear();
 
         /* Why are we here */
-        prt("FrogComposband Options", 1, 0);
+        prt("Discordband Options", 1, 0);
 
         while(1)
         {
@@ -3416,7 +3416,7 @@ void do_cmd_version(void)
 /*        if (VER_PATCH == 0) xtra = " (Alpha)"; */
         if (VER_MAJOR != 7) xtra = " (Beta)";
     }
-    msg_format("You are playing <color:B>FrogComposband</color> <color:r>%d.%d.%s%s</color>.",
+    msg_format("You are playing <color:B>Discordband</color> <color:r>%d.%d.%s%s</color>.",
         VER_MAJOR, VER_MINOR, VER_PATCH, xtra);
     if (1)
     {
@@ -4252,7 +4252,7 @@ static void do_cmd_knowledge_artifacts(void)
 
     if (random_artifacts)
     {
-        /* FIXED_ART ... 
+        /* FIXED_ART ...
         if (random_artifact_pct >= 100)
         {
             cmsg_print(TERM_L_RED, "You won't find any fixed artifacts this game.");
@@ -4663,7 +4663,7 @@ static vec_ptr _prof_weapon_alloc(int tval)
     vec_sort(v, (vec_cmp_f)_compare_k_lvl);
     return v;
 }
- 
+
 static cptr _prof_exp_str[5]   = {"[Un]", "[Be]", "[Sk]", "[Ex]", "[Ma]"};
 static char _prof_exp_color[5] = {'w',    'G',    'y',    'r',    'v'};
 static cptr _prof_weapon_heading(int tval)
@@ -4818,7 +4818,7 @@ static int _do_cmd_knowledge_weapon_exp_aux(int mode, int *huippu)
 
     doc_insert_cols(doc, cols, 3, 1);
     switch (mode)
-    {   
+    {
         case 1:
         {
             class_t *class_ptr = get_class();
@@ -4848,7 +4848,7 @@ static void do_cmd_knowledge_weapon_exp(void)
     {
         if (_do_cmd_knowledge_weapon_exp_aux(mode, &huippu)) mode = ((mode + 1) % 4);
         else lopeta = TRUE;
-    } 
+    }
 }
 
 /*

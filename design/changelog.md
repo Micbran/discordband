@@ -9,3 +9,6 @@
 * N:1305 Kung-fu Yeek From Hell -> (New unique added)
 * N:1306 The Hellraiser -> (New unique added)
 * N:1307 Zu-Aon, Cosmic ICE Agent -> (New unique added)
+
+### Dev Stuff
+* Changed names to make sure it says Discordband/discordband and not FrogComposband/frogcomposband.
