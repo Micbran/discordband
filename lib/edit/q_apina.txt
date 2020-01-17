@@ -27,7 +27,7 @@ T:QUEST:NORMAL:NO_ROTATE
 L:#:PERMANENT
 L:~:SHALLOW_WATER
 L:<:UP_STAIR
-L:G:FLOWER:MON(shadowlord)
+L:G:FLOWER:MON(^dreadlord$)
 L:d:GRASS:MON(^dread$, NO_GROUP)
 L:D:GRASS:MON(dreadmaster)
 L:p:GRASS:OBJ(large steel chest, DEPTH+25):MON(enchantress)
