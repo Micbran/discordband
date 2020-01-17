@@ -1373,7 +1373,7 @@ void battle_monsters(void)
                 case MON_MASTER_LICH:
                 case MON_DREADMASTER:
                 case MON_DEMILICH:
-                case MON_SHADOWLORD:
+                case MON_DREADLORD:
                 case MON_ARCHLICH:
                 case MON_BLEYS:
                 case MON_CAINE:
@@ -1418,7 +1418,7 @@ void battle_monsters(void)
                 case MON_PLASMA_VORTEX:
                 case MON_TIME_VORTEX:
                 case MON_MANDOR:
-                case MON_KAVLAX:
+                case MON_KERIAX:
                 case MON_RINALDO:
                 case MON_STORMBRINGER:
                 case MON_TIME_HOUND:
