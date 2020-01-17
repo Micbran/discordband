@@ -1225,7 +1225,7 @@ void monster_death(int m_idx, bool drop_item)
         }
         break;
 
-    case MON_UNMAKER:
+    case MON_WMOPC:
         /* One more ultra-hack: An Unmaker goes out with a big bang! */
         {
             int flg = PROJECT_GRID | PROJECT_ITEM | PROJECT_KILL;
@@ -1357,7 +1357,7 @@ void monster_death(int m_idx, bool drop_item)
     case MON_ANGMAR:
     case MON_KHAMUL:
     case MON_DWAR:
-    case MON_HOARMURATH:
+    case MON_MOASSEMAN:
     {
         if (one_in_(3))
         {
