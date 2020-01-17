@@ -9,6 +9,7 @@
 * N:1305 Kung-fu Yeek From Hell -> (New unique added)
 * N:1306 The Hellraiser -> (New unique added)
 * N:1307 Zu-Aon, Cosmic ICE Agent -> (New unique added)
+* Actually, all the tomenet things just got removed. Maybe they'll come back.
 
 ### Dev Stuff
 * Changed names to make sure it says Discordband/discordband and not FrogComposband/frogcomposband.
