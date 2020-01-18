@@ -7616,7 +7616,7 @@ F:DROP_CORPSE | POS_GAIN_AC | POS_SEE_INVIS
 P:Copy:Hobbit:Rogue
 P:Life:110
 P:Body:Spider
-S:FREQ_30 | BR_DARK | BR_POIS | DETECT_MONSTERS
+S:FREQ_30 | BR_DARK | BR_POISON | DETECT_MONSTERS
 S:HEAL | BLIND | CONFUSE | SCARE |
 S:S_SPIDER
 D:Shelob is an enormous bloated spider, rumoured to have been one of the
@@ -12038,7 +12038,7 @@ D:undulation."
 
 N:715:Glaurung, Father of the Dragons
 G:D:r
-I:120:120d100:20:150:70:1000
+I:120:120d100:20:180:70:1000
 W:70:2:999:25000:0:0
 B:CLAW:HURT(10d12)
 B:CLAW:HURT(10d12)
@@ -12653,7 +12653,7 @@ D:A massive glowing eagle bathed in flames. The searing heat chars your
 D:skin and melts your armour.
 
 N:744:Nightcrawler
-G:J:D
+G:W:D
 I:120:80d60:20:160:10:400
 W:54:4:999:8100:0:0
 B:STING:HURT(8d8):LOSE_CON
@@ -13156,7 +13156,7 @@ D:against him and live.
 
 N:766:Ancalagon the Black
 G:D:D
-I:145:15d100:20:125:70:2000
+I:145:150d100:20:195:70:2000
 W:94:3:999:30000:0:0
 B:CLAW:HURT(12d12):NETHER(2d12)
 B:CLAW:HURT(12d12):DARK(2d12)
@@ -15016,7 +15016,7 @@ D:The mightiest of Cyberdemons, their lord and ruler.
 #and aura, if players are foolish enough to melee him. I weakened
 #his Mana storm a bit to compensate.
 #Note: Chris is a coward.
-N:844:Feagwath, the Undead Sorcerer
+N:844:Elgorath, Slayer of Peons
 G:L:v
 I:130:60d100:100:100:0:170
 W:90:3:999:45000:0:0
@@ -15035,12 +15035,12 @@ F:RES_FIRE | IM_COLD | RES_ELEC | IM_POIS | RES_NETH | NO_CONF | NO_SLEEP |
 F:POS_HOLD_LIFE | POS_SEE_INVIS | POS_TELEPATHY
 P:Copy:Skeleton:Mage
 P:Stats:0:5:0:0:0:0
-S:1_IN_3 | BO_MANA(1d250+50) | BA_FIRE(1d630+20) | PSY_SPEAR(1d120+120)
+S:1_IN_3 | BO_MANA(1d250+50) | BA_FIRE(1d800+400) | PSY_SPEAR(1d120+120)
 S:TELE_SELF | BLIND | SCARE | CAUSE_4 | BRAIN_SMASH | POLYMORPH
 S:MANA_STORM | DISPEL_MAGIC | ANTI_MAGIC | HAND_DOOM | ANIM_DEAD
 S:S_MONSTER | S_HI_DEMON | S_HI_UNDEAD | DETECT_MONSTERS | IDENTIFY
 O:DROP_MAGE
-D:A stench of corruption and decay surrounds this sorcerer, who has clearly
+D:A stench of corruption and roast rat surrounds this sorcerer, who has clearly
 D:risen from the grave to continue his foul plots and schemes.
 
 N:845:Yog-Sothoth, the All-in-One
@@ -15181,7 +15181,7 @@ F:SMART | TAKE_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY |
 F:ANIMAL | EVIL | RES_FIRE | RES_POIS | NO_CONF | NO_SLEEP
 F:DROP_CORPSE | POS_GAIN_AC
 S:1_IN_10 |
-S:BR_NETH | BR_POIS | BR_DARK
+S:BR_NETHER | BR_POISON | BR_DARK
 S:BR_FIRE | BR_HELL_FIRE
 S:S_HOUND
 P:Copy:Barbarian:Mauler
@@ -15859,7 +15859,7 @@ W:66:4:999:33333:0:0
 B:CLAW:VAMP(8d10):UNLIFE(10d10)
 B:SLASH:HURT(6d6):CUT(50d1,50%)
 B:SPIT:DAM(5d10):BLIND
-B:HIT:HURT(10d10):LOSE_CON
+B:PUNCH(50):HURT(10d10):LOSE_CON:STUN(5d2,50%)
 F:UNIQUE | MALE |
 F:FORCE_SLEEP | FORCE_MAXHP | SMART | CAN_SPEAK | CAN_FLY | AURA_COLD |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
@@ -15870,7 +15870,7 @@ F:POS_HOLD_LIFE | POS_SEE_INVIS
 P:Copy:Vampire:Time-Lord
 P:Body:Vampire
 S:1_IN_4 |
-S:SCARE | S_KIN | WORLD | TELE_TO | BO_PLAS(8d7+95) |
+S:SCARE | S_KIN | WORLD | TELE_TO | BO_PLASMA(8d7+95) |
 S:DETECT_MONSTERS | MAPPING | IDENTIFY
 D:DIO, who became an immortal vampire with the help
 D:of a stone mask, only looks at the adventurer as bait.
@@ -16567,7 +16567,7 @@ P:Copy:Balrog:Chaos-Warrior
 P:Body:Demogorgon
 S:FREQ_25 | BA_DARK | BO_NETHER(5d5+180) | BR_NETHER | BR_DARK | BR_NUKE
 S:BR_POISON | HAND_DOOM |
-S:BLIND | CONFUSE | SCARE | S_HI_DEMON | S_KIN | DISPEL_MAGIC | ANTI_MAGIC | SHRIEK | TELEPORT
+S:BLIND | CONFUSE | SCARE | S_HI_DEMON | S_KIN | DISPEL_MAGIC | ANTI_MAGIC | SHRIEK | TELE_SELF
 D:He is said to be a terrible demon whose death can be uttered
 D:simply by saying his name, and a commander of the hellish army.
 
@@ -17005,7 +17005,7 @@ D:It is a large, rippling watery pool.
 
 N:945:Davion of Doomdevil
 G:U:r
-I:135:7d880:50:160:0:1000
+I:135:120d88:50:160:0:1000
 W:88:2:999:32000:0:0
 B:HIT:HURT(9d12):FIRE(10d12)
 B:HIT:HURT(9d12):PLASMA(5d12)
@@ -17019,7 +17019,7 @@ F:POS_HOLD_LIFE | POS_SEE_INVIS | POS_GAIN_AC
 P:Copy:Balrog:Chaos-Warrior
 P:Body:Demonic Horror
 S:FREQ_25 |
-S:BR_FIRE | DISPEL_MAGIC | ANTI_MAGIC | BR_SOUND | BR_PLASMA | BA_CHAO |
+S:BR_FIRE | DISPEL_MAGIC | ANTI_MAGIC | BR_SOUND | BR_PLASMA | BA_CHAOS |
 S:S_HI_DEMON | HEAL
 D:Davion Fuxa, who saw the world in only black and white
 D:harbored a hatred for women and minorities
@@ -17562,7 +17562,7 @@ F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS
 F:DROP_CORPSE | POS_SEE_INVIS
 P:Copy:Dark-Elf:Rogue
 S:1_IN_4 |
-S:S_HOUNDS | S_DRAGON | S_UNIQUE | S_UNDEAD |
+S:S_HOUND | S_DRAGON | S_UNIQUE | S_UNDEAD |
 S:S_MONSTER | S_KIN | S_CYBER | DETECT_MONSTERS
 D:A dark elf, mighty in Gondolin, and betrayer of that hidden city to
 D:Morgoth's wrath.
@@ -21490,7 +21490,7 @@ S:BERSERK
 O:DROP_WARRIOR
 D:An orcish warrior in a battle-frenzy; he'll stop only when he drops.
 
-N:1189:Orc sorcerer
+N:1189:Orc warlock
 G:o:v
 I:118:18d10:20:16:20:150
 W:23:1:999:75:20000:657
@@ -23881,7 +23881,7 @@ G:h:U
 I:140:80d100:95:175:0:50
 W:90:2:999:95000:0:0
 B:GAZE:UNLIFE(10d10):INERTIA(5d10)
-B:GAZE:UNLIFE(10d10):DISPEL_MAGIC
+B:GAZE:UNLIFE(10d10):DISENCHANTMENT(5d10)
 B:GAZE:UNLIFE(10d10):DRAIN_CHARGES
 B:GAZE:TIME(10d10):LOSE_ALL:CONFUSION(20%)
 A:UNLIFE(1d20)
@@ -23890,13 +23890,14 @@ F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID | IM_POIS |
 F:NO_CONF | NO_SLEEP | NONLIVING | RES_NETH |
 F:RES_CHAO | RES_DISE | RES_TIME | DROP_CORPSE |
 F:DROP_4D2 | DROP_3D2 | DROP_GOOD | DROP_GREAT |
-F:POS_SEE_INVIS | POS_HOLD_LIFE | POS_TELEPATHY
+F:POS_SEE_INVIS | POS_HOLD_LIFE | POS_TELEPATHY |
+F:FORCE_MAXHP
 P:Copy:Demigod:Time-Lord
 P:Body:Benedict
 S:1_IN_1 | 
 S:GAZE | BO_TIME(10d10+350) | BR_NETHER | BR_INERTIA | 
-S:BR_DISINTEGRATION | HEAL | INVULN | TELEPORT | 
-S:DRAIN_MANA (20d15) | S_HI_UNDEAD |
+S:BR_DISINTEGRATE | HEAL | INVULN | TELE_SELF | 
+S:DRAIN_MANA(20d15) | S_HI_UNDEAD |
 S:S_UNIQUE | BR_DISENCHANT
 D:An Agent of Chaos from a faraway land 
 D:forced to flee after a disaster that no one, 
