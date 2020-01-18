@@ -19569,7 +19569,7 @@ F:DROP_CORPSE | CAN_FLY | WEIRD_MIND |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | DROP_GREAT |
 P:Copy:Imp:Rogue
 S:1_IN_3
-S:S_SOFTWARE_BUG | POLYMORPH | BR_CONFUSE
+S:S_SOFTWARE_BUG | POLYMORPH | BR_CONFUSION
 D:A frazzled stumbling pathetic shadow of a man. He
 D:seems steeped in confusion while mumbling something
 D:about memory corruption in cmd2.c.
