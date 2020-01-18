@@ -23799,6 +23799,112 @@ S:S_HOUND
 D:The infamous Zeyphor Mankeli has but one response to danger.
 D:You might figure it out.
 
+N:1305:Kung-Fu Yeek From Hell
+G:y:s
+I:125:36d25:18:24:5:60
+W:40:4:999:3000:0:0
+B:KICK:HURT(20d1):STUN(2d3,50%)
+B:PUNCH:HURT(10d2):STUN(1d8,50%)
+B:KICK:HURT(20d1):STUN(2d3,50%)
+B:PUNCH:HURT(10d2):STUN(1d8,50%)
+F:UNIQUE | EVIL | ANIMAL
+F:RES_SOUN | IM_ACID | RES_FIRE |
+F:RES_ELEC | DROP_2D2 | DROP_GOOD |
+F:AURA_REVENGE | DROP_CORPSE
+P:Copy:Yeek:Tourist
+P:Body:Monk
+S:1_IN_4 |
+S:BLINK | BLIND | SLOW | S_MONSTER
+D:Even this yeek will crush you. But there is nowhere left to run from it!
+
+##the implication that zu-aon's description is racist is funnier than saying it outright
+##also, his tele_to had special casing in tomenet to get him to stick to you. maybe make him able to tele follow you but you can't TO him away?
+N:1306:Zu-Aon, the Cosmic Border Control
+G:N:b
+I:145:200d100:200:200:0:10
+W:109:1:999:10000000:0:0
+B:HIT(127):HURT(70d5):STUN(2d5)
+B:HIT(127):HURT(70d5):STUN(2d5)
+B:GAZE:BRAIN_SMASH(5d5)
+F:UNIQUE | NONLIVING | FORCE_MAXHP | 
+F:SMART | KILL_WALL | BASH_DOOR | 
+F:NO_STUN | NO_CONF | NO_FEAR | NO_SLEEP |
+F:KILL_ITEM | CAN_FLY | REGENERATE | COLD_BLOOD |
+F:IM_ACID | IM_FIRE | IM_COLD | IM_ELEC | IM_POIS |
+F:RES_NETH | RES_LITE | RES_DARK | RES_SOUN | RES_CHAO | RES_DISE |
+F:RES_NEXU | RES_TIME | RES_INER | RES_GRAV | RES_SHAR | RES_WATE |
+F:RES_WALL | RES_TELE | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 |
+F:DROP_GOOD | DROP_GREAT | EMPTY_MIND | ATTR_ANY | DROP_CORPSE |
+F:MOVE_BODY | REFLECTING
+P:Copy:Golem:Blood-Knight
+P:Body:Naga
+S:1_IN_4 |
+S:BA_MANA | BA_NETHER(10d10+558) | TELE_TO | HEAL(762)
+D:Guarding the terrible secret of space this being has a clear mission. 
+D:Its patience seems to be infinite, and its appearance doesn't reveal 
+D:if this creature is actually alive or some sort of construct or non-living avatar. 
+D:Its powers seem to be great enough to even hold back banished gods, 
+D:and while its assignment probably lasts a cosmos' lifetime, its paycheck remains unknown.
+
+N:1307:The Hellraiser
+G:X:r
+I:140:150d100:200:200:0:10
+W:106:4:999:350000:0:0
+B:HIT(126):HURT(30d10)
+B:HIT(126):HURT(30d10)
+B:GAZE(80):TIME(10d10)
+B:GAZE(80):BRAIN_SMASH(8d10)
+F:UNIQUE | EVIL | NONLIVING | EMPTY_MIND |
+F:NO_FEAR | FORCE_MAXHP | MOVE_BODY | KILL_WALL |
+F:IM_FIRE | IM_ELEC | IM_ACID | IM_COLD | IM_POIS |
+F:REFLECTING | HAS_LITE_2 | RES_NETH | RES_NEXU |
+F:RES_WATE | RES_CHAO | NO_STUN | REGENERATE |
+F:RES_DARK | NO_SLEEP | KILL_ITEM | BASH_DOOR |
+F:ATTR_ANY | NO_CONF | NO_STUN | CAN_FLY | KILL_ITEM |
+F:DROP_4D2 | DROP_2D2 | DROP_3D2 | DROP_GOOD | DROP_GREAT |
+F:RES_SOUN
+P:Copy:Golem:Priest
+P:Body:Xorn
+S:1_IN_3 |
+S:BR_DISINTEGRATE | BA_MANA | BR_MANA | BR_CHAOS | 
+S:S_HI_UNDEAD | S_HI_DEMONS | S_HI_DRAGONS | SHRIEK
+D:A remotely humanoid creature with four arms ending in claws 
+D:and a demonic head with its facial features unchanging, 
+D:making it seem much like a golem politician. 
+D:Awakened on the hell forge, the body is gleaming in 
+D:tones of dark red as heated iron. 
+D:Imbued by corrupt magic to call forth ultimate terror, 
+D:its gaze will sap your life forces and make you lose all grip on sanity.
+
+N:1308:Nivos Daeren, The Prophesier
+G:h:U
+I:140:80d100:95:175:0:50
+W:90:2:999:95000:0:0
+B:GAZE:UNLIFE(10d10):INERTIA(5d10)
+B:GAZE:UNLIFE(10d10):DISPEL_MAGIC
+B:GAZE:UNLIFE(10d10):DRAIN_CHARGES
+B:GAZE:TIME(10d10):LOSE_ALL:CONFUSION(20%)
+A:UNLIFE(1d20)
+F:KILL_WALL | UNIQUE | MALE | CAN_SPEAK | EVIL
+F:RES_FIRE | RES_COLD | RES_ELEC | RES_ACID | IM_POIS |
+F:NO_CONF | NO_SLEEP | NONLIVING | RES_NETH |
+F:RES_CHAO | RES_DISE | RES_TIME | DROP_CORPSE |
+F:DROP_4D2 | DROP_3D2 | DROP_GOOD | DROP_GREAT |
+F:POS_SEE_INVIS | POS_HOLD_LIFE | POS_TELEPATHY
+P:Copy:Demigod:Time-Lord
+P:Body:Benedict
+S:1_IN_1 | 
+S:GAZE | BO_TIME(10d10+350) | BR_NETHER | BR_INERTIA | 
+S:BR_DISINTEGRATION | HEAL | INVULN | TELEPORT | 
+S:DRAIN_MANA (20d15) | S_HI_UNDEAD |
+S:S_UNIQUE | BR_DISENCHANT
+D:An Agent of Chaos from a faraway land 
+D:forced to flee after a disaster that no one, 
+D:not even him with his formidable skills of foresight, 
+D:could have expected to happen ruined his machinations before they ever came to fruition.
+D:But he has all the time in the world to wait for new opportunities 
+D:to cause mayhem to arise.
+
 
 # N: serial number : monster name
 # G: symbol : color
