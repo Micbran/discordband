@@ -24006,7 +24006,7 @@ S:FREQ_20 | POLYMORPH | BR_TIME | BRAIN_SMASH | BR_CHAOS | BR_CONFUSION | S_KIN 
 D:The final levels of posting are a scary thought. Real life and the posting wars
 D:will merge seamlessly. Posting becomes a duty. Anything can become funny.
 D:Anything can become anything. Gaming, sex, progression all become secondary to posting.
-D:All friends and foes in the Posting Wars becoming known. It seems to good to be
+D:All friends and foes in the Posting Wars become known. It seems too good to be
 D:true, but it is. Are you ready to bear that burden, yung poster?
 
 N:1314:Hound of doom
