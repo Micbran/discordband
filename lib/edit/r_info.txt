@@ -17073,7 +17073,7 @@ P:Copy:High-Elf:Rogue
 P:Speed:+10
 
 N:949:Davion Fuxa
-G:p:B
+G:@:b
 I:130:50d100:50:170:0:170
 W:70:2:999:30000:0:0
 B:HIT:HURT(12d12):HURT(12d12, 20%)
@@ -21267,21 +21267,23 @@ D:their balance. Its aura is pure beyond expression, its eyes reflect supreme
 D:laws beyond comprehension, daring to look at it will drive you insane,
 D:let alone fighting it!
 
+# Micbran is a vampire who steals men's RP energy and makes them his toons, not an angel.
+# TODO finish reworking michael and stick brightlance in where michael used to be
 N:1179:Micbran, the Racist Brandon
-G:A:U
+G:V:U
 I:130:69d199:100:175:255:255
 W:98:3:999:77777:0:0
 B:GAZE:HURT(7d4):TERRIFY
 B:HIT:HURT(50d7)
 B:HIT:HURT(50d7)
-F:FORCE_SLEEP | FORCE_MAXHP | GOOD | SELF_LITE_2 |
+F:FORCE_SLEEP | FORCE_MAXHP | EVIL | SELF_LITE_2 |
 F:ONLY_ITEM | DROP_2D2 | DROP_3D2 | DROP_4D2 | DROP_GOOD | DROP_GREAT
 F:SMART | KILL_ITEM | OPEN_DOOR | BASH_DOOR | MOVE_BODY | CAN_SPEAK
 F:RES_ACID | RES_FIRE | RES_COLD | RES_ELEC | RES_POIS | RES_LITE | AURA_FEAR
 F:AURA_ELEC | ESCORT | UNIQUE | REGENERATE | NO_STUN | MALE
 F:NO_CONF | NO_SLEEP | CAN_FLY | KILL_WALL | NO_FEAR | REFLECTING | RES_TELE
 F:POS_HOLD_LIFE | POS_SEE_INVIS | POS_GAIN_AC |
-P:Copy:Archon:Paladin
+P:Copy:Vampire:Paladin
 P:Stats:2:2:5:2:2:5
 P:Speed:+10
 S:1_IN_3 |
@@ -21800,7 +21802,7 @@ D:of the Roman Church -- at this moment he is wearing his coarse, old,
 D:monk's cassock."
 
 N:1204:Jake Escobar
-G:h:D
+G:@:D
 I:150:80d100:100:120:4:150
 W:90:2:999:50000:0:0
 B:HIT(127):HURT(35d10):HURT(15d10,33%):HURT(5d10,20%)
@@ -23835,7 +23837,7 @@ F:RES_NETH | RES_LITE | RES_DARK | RES_SOUN | RES_CHAO | RES_DISE |
 F:RES_NEXU | RES_TIME | RES_INER | RES_GRAV | RES_SHAR | RES_WATE |
 F:RES_WALL | RES_TELE | DROP_1D2 | DROP_2D2 | DROP_3D2 | DROP_4D2 |
 F:DROP_GOOD | DROP_GREAT | EMPTY_MIND | ATTR_ANY | DROP_CORPSE |
-F:MOVE_BODY | REFLECTING
+F:MOVE_BODY | REFLECTING | NO_QUEST | NO_SUMMON 
 P:Copy:Golem:Blood-Knight
 P:Body:Naga
 S:1_IN_4 |
@@ -23862,7 +23864,7 @@ F:RES_WATE | RES_CHAO | NO_STUN | REGENERATE |
 F:RES_DARK | NO_SLEEP | KILL_ITEM | BASH_DOOR |
 F:ATTR_ANY | NO_CONF | NO_STUN | CAN_FLY | KILL_ITEM |
 F:DROP_4D2 | DROP_2D2 | DROP_3D2 | DROP_GOOD | DROP_GREAT |
-F:RES_SOUN
+F:RES_SOUN | NO_QUEST | NO_SUMMON
 P:Copy:Golem:Priest
 P:Body:Xorn
 S:1_IN_3 |
@@ -23877,7 +23879,7 @@ D:Imbued by corrupt magic to call forth ultimate terror,
 D:its gaze will sap your life forces and make you lose all grip on sanity.
 
 N:1308:Nivos Daeren, The Prophesier
-G:h:U
+G:@:U
 I:140:80d100:95:175:0:50
 W:90:2:999:95000:0:0
 B:GAZE:UNLIFE(10d10):INERTIA(5d10)
@@ -23899,12 +23901,10 @@ S:GAZE | BO_TIME(10d10+350) | BR_NETHER | BR_INERTIA |
 S:BR_DISINTEGRATE | HEAL | INVULN | TELE_SELF | 
 S:DRAIN_MANA(20d15) | S_HI_UNDEAD |
 S:S_UNIQUE | BR_DISENCHANT
-D:An Agent of Chaos from a faraway land 
-D:forced to flee after a disaster that no one, 
-D:not even him with his formidable skills of foresight, 
-D:could have expected to happen ruined his machinations before they ever came to fruition.
-D:But he has all the time in the world to wait for new opportunities 
-D:to cause mayhem to arise.
+D:An Agent of Chaos. There are rumors that his presence here
+D:is because a god destroyed the last setting he occupied
+D:for "being an obnoxious cunt".
+D:However, he seems mostly armless.
 
 N:1309:Greater Cyber Wyrm Angel Daemon Lich
 G:N:W
@@ -23946,6 +23946,368 @@ S:S_ANT | S_SPIDER | S_HOUND | S_HYDRA | S_DEMON | S_UNDEAD |
 S:S_DRAGON | S_HI_UNDEAD | S_AMBERITE | S_UNIQUE | BA_LITE | S_HI_DEMON | S_HI_DRAGON
 D:A kill of this sanity-blasting natural evil good undead nonliving dragon demon giant troll orc human
 D:is worth 99000000 experience points for a level 1 character. 
+
+N:1311:Brain worm mass
+G:w:v
+I:115:10d8:7:5:30:10
+W:35:3:70:30:0:0
+B:CRAWL:MIND_BLAST(3d4)
+F:RAND_50 | ATTR_MULTI | CAN_SWIM |
+F:STUPID | WEIRD_MIND | MULTIPLY | BASH_DOOR |
+F:ANIMAL | HURT_LITE | NO_FEAR | SELF_LITE_1
+F:POS_GAIN_AC
+P:Copy:Snotling:Warrior
+P:Body:Worm
+S:MULTIPLY
+D:At lower levels of posting, posters love to post.
+D:They will share their "Loss", their "Game of Thrones",
+D:and other pop culture that is already dated.
+
+N:1312:Brain Wyrm
+G:D:v
+I:121:75d20:20:130:200:500
+W:45:2:999:12000:50000:1313
+B:CLAW:HURT(5d8):CHAOS(1d10, 10%)
+B:CLAW:HURT(5d8):DISENCHANT(1d10, 10%)
+B:BITE:HURT(6d10):MIND_BLAST(2d10, 50%):CUT(6d8, 10%)
+F:FORCE_SLEEP | FORCE_MAXHP | ATTR_MULTI |
+F:DROP_3D2 | DROP_4D2 | CAN_FLY |
+F:SMART | BASH_DOOR | MOVE_BODY |
+F:DRAGON | NO_CONF | NO_SLEEP | RIDING | ELDRITCH_HORROR
+F:DROP_CORPSE | POS_GAIN_AC
+P:Copy:Half-Titan:Beastmaster
+P:Life:110
+P:Body:Dragon
+S:FREQ_20 | BLIND | CONFUSE | BR_CHAOS | BR_CONFUSION | DETECT_OBJECTS 
+D:Mid-level posters start to resent or even hate to post
+D:yet they never give up. They think 9/11 is funny, they think Impact font
+D:is funny. Eventually, they will begin posting more and more until they begin
+D:to like posting again or even transcend past it.
+
+N:1313:Terminal Brain Wyrm
+G:D:v
+I:126:55d100:40:170:20:2000
+W:78:2:999:35000:0:0
+B:CLAW:HURT(6d12):POLYMORPH:SLOW
+B:CLAW:HURT(6d12):CONFUSION(1d12)
+B:CLAW:HURT(6d12):CHAOS(1d12)
+B:BITE:HURT(9d14):BRAIN_SMASH(3d14):CUT(8d14, 50%)
+F:ATTR_MULTI | ATTR_ANY |
+F:FORCE_SLEEP | FORCE_MAXHP | RES_CHAO | RES_DISE |
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | DROP_GOOD |
+F:BASH_DOOR | MOVE_BODY | CAN_FLY | SHAPECHANGER |
+F:EVIL | DRAGON | NO_CONF | NO_SLEEP | RIDING | RES_TIME
+F:DROP_CORPSE | POS_SEE_INVIS | POS_GAIN_AC | ELDRITCH_HORROR
+P:Copy:Half-Titan:Beastmaster
+P:Stats:1:0:0:0:1:1
+P:Life:110
+P:Body:Dragon
+S:FREQ_20 | POLYMORPH | BR_TIME | BRAIN_SMASH | BR_CHAOS | BR_CONFUSION | S_KIN | CLAIRVOYANCE
+D:The final levels of posting are a scary thought. Real life and the posting wars
+D:will merge seamlessly. Posting becomes a duty. Anything can become funny.
+D:Anything can become anything. Gaming, sex, progression all become secondary to posting.
+D:All friends and foes in the Posting Wars becoming known. It seems to good to be
+D:true, but it is. Are you ready to bear that burden, yung poster?
+
+N:1314:Hound of doom
+G:Z:r
+I:125:60d30:30:100:0:150
+W:75:3:999:3000:0:0
+B:BITE:HURT(3d12)
+B:BITE:HURT(3d12)
+B:BITE:HURT(3d12)
+B:CLAW:HURT(3d3)
+F:ATTR_MULTI | ATTR_ANY |
+F:FORCE_SLEEP |
+F:FRIENDS(3d3) |
+F:BASH_DOOR |
+F:ANIMAL | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | POS_GAIN_AC
+P:Copy:Kutar:Rogue
+P:Skills:0:-7:0:0:0:0:0:0
+P:ExtraSkills:0:-4:0:0:0:0:0:0
+P:SpellStat:Dex
+P:Body:Hound
+S:FREQ_15 | HAND_DOOM | DETECT_MONSTERS
+D:A tangible aura of menace shaped like a hound.
+
+N:1315:Sky puppy
+G:C:b
+I:120:48d10:25:80:30:150
+W:83:4:999:1500:0:0
+B:BITE:HURT(4d12):HOLY_FIRE(3d9)
+B:BITE:HURT(4d12):HOLY_FIRE(3d9)
+B:BITE:HURT(4d12):HOLY_FIRE(3d9)
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:RAND_25 | FRIENDS(3d3) | AURA_ELEC |
+F:BASH_DOOR | MOVE_BODY |
+F:ANIMAL | GOOD | NO_CONF
+F:DROP_CORPSE | POS_GAIN_AC
+S:1_IN_5 |
+S:BR_HOLY_FIRE
+P:Copy:Barbarian:Warrior
+P:Body:Hound
+D:It looks so cute!
+D:With a face like that, it could say anything
+D:and someone would still love it. No matter how toxic it was.
+
+N:1316:Bloody maelstrom
+G:v:R
+I:150:40d20:100:50:0:0
+W:69:3:999:2020:0:0
+B:ENGULF:CUT(100d1)
+B:ENGULF:CUT(50d2)
+B:ENGULF:CUT(25d4)
+B:ENGULF:CUT(13d8)
+F:FORCE_SLEEP | RAND_50 |
+F:EMPTY_MIND | BASH_DOOR | CAN_FLY |
+F:NO_FEAR | NO_CONF | NO_SLEEP | NO_STUN | NONLIVING
+F:POS_GAIN_AC | POS_HOLD_LIFE
+P:Body:Vortex8
+D:Attacks all adjacent monsters with power corresponding to
+D:your cut status. Then increases your cut status.
+D:No effect to unliving monsters.
+
+N:1317:Gwarlrauko
+G:U:D
+I:130:25d30:30:30:20:50
+W:53:3:999:3200:0:0
+B:TOUCH:DARK(5d10)
+B:TOUCH:DARK(5d10)
+B:CLAW:HURT(1d10):LOSE_INT(50%)
+B:CLAW:HURT(1d10):LOSE_WIS(50%)
+F:FORCE_SLEEP | CAN_FLY |
+F:ONLY_ITEM | DROP_1D2 | REGENERATE | HURT_LITE | SELF_DARK_1 |
+F:INVISIBLE | COLD_BLOOD | FRIENDS(2d2) | RES_NETH | RES_CHAO | SELF_DARK_2 |
+F:EVIL | DEMON | RES_POIS | RES_DARK | DROP_GOOD | DROP_60 | DROP_2D2
+F:POS_SEE_INVIS | POS_HOLD_LIFE | REFLECTING 
+P:Copy:Balrog:Samurai
+S:1_IN_8 |
+S:BR_DARK(50%)
+D:Meaning "gwarl-daemon" in the tongue of the Elves, this evil spirit
+D:waits to surround you in the darkness. Ignore it while you still can!
+
+N:1318:Nameless N
+G:N:s
+I:120:80d100:73:200:0:2500
+W:84:5:999:33333:0:0
+B:CRUSH:ACID(30d25):SHATTER
+F:RAND_25 | RAND_50 | BASH_DOOR | KILL_WALL |
+F:IM_ACID | RES_FIRE | RES_COLD | RES_ELEC |
+F:IM_POIS | RES_SHAR | RES_CHAO | RES_TELE |
+F:FORCE_MAXHP | REGENERATE
+D:'Far, far below the deepest delvings of the Dwarves, the world is
+D:gnawed by nameless Ns...' It is as a vast N,
+D:eating its way through the roots of the earth.
+
+N:1319:Glacial Legion
+G:G:b
+I:130:70d99:40:129:30:0
+W:97:8:999:85000:0:0
+A:ICE(3d9)
+F:NEVER_BLOW | HURT_FIRE | RES_LITE | IM_COLD | UNIQUE
+F:DROP_2D2 | DROP_GOOD | DROP_3D2 | DROP_GREAT | PASS_WALL
+F:DROP_1D2 | FORCE_MAXHP | EVIL | UNDEAD
+P:Copy:Spectre:High-Mage
+P:Body:Orb
+S:1_IN_1
+S:BR_COLD | BO_ICE(1d666+777) | BA_COLD(2d690+420) | BR_SHARDS | S_KIN | JMP_ICE(10d10+450)
+D:This awesome 4K Freeze from Tales of Maj'Eyal 
+D:and the Monolith series is making a guest appearance here.
+D:"A massive, shifting, ethereal form floats in the air around an orb of frozen blood.
+D:The air around it condenses into freezing pools on the floor beneath it."
+
+##this should be the xorn racial boss w/ blighted maul art
+N:1320:Rotting Titan
+G:X:U
+I:119:90d60:30:90:55:2500
+W:63:3:999:38350:0:0
+B:CRUSH:SHATTER(30d10):STUN(6d5, 50%)
+B:BITE:POISON(15d10):NETHER(5d5):DISEASE
+F:UNIQUE | FORCE_MAXHP | KILL_WALL | 
+F:RES_COLD | RES_ELEC | RES_ACID | IM_POIS
+F:EVIL | UNDEAD | GIANT | REGENERATE | DROP_4D2
+F:DROP_GOOD | DROP_GREAT | RES_SHAR | RES_SOUN
+F:NO_STUN | NO_CONF | NO_SLEEP | FORCE_SLEEP
+S:1_IN_5
+S:TELE_TO | ROCKET(200) | SHOOT(15d10) | SCARE | SLOW | S_UNDEAD | HEAL
+D:This gigantic mass of flesh and stone moves slowly, the ground rumbling with each step it takes. 
+D:Its body seems to constantly pulsate and reform. 
+D:Massive stones at the end of each limb form massive blunt weapons.
+
+##N:1321:Elandar, the Sorcerer
+
+##N:1322:Argoniel, the Reaver
+
+N:1323:Spirit of Poschengband
+G:G:v
+I:150:100d20:90:150:0:50
+W:50:10:999:100000:0:0
+B:WAIL:TERRIFY
+B:WAIL:CONFUSE
+B:WAIL:EAT_ITEM:EAT_GOLD:EAT_ITEM:EAT_GOLD
+B:WAIL:DRAIN_MANA(10d10):DRAIN_CHARGES
+F:FORCE_SLEEP |
+F:ONLY_ITEM | DROP_2D2 | CAN_FLY |
+F:COLD_BLOOD | TAKE_ITEM | PASS_WALL |
+F:EVIL | UNDEAD | RES_COLD | IM_POIS | RES_NETH |
+F:NO_CONF | NO_SLEEP | ATTR_MULTI | DROP_GOOD | DROP_GREAT |
+F:NO_SUMMON | NO_QUEST | RES_SHAR | RES_CHAO | RES_DISE |
+F:POS_SEE_INVIS | POS_HOLD_LIFE | DROP_4D2
+P:Copy:Spectre:Rogue
+S:1_IN_5 |
+S:BLIND | PARALYZE | DRAIN_MANA | AMNESIA | TELE_SELF | TELE_OTHER |
+S:TELE_LEVEL | S_MONSTER | DISPEL_MAGIC | BR_DISINTEGRATE(1%) | JMP_DISINTEGRATE(1)
+D:Even now you feel like you are losing it!
+
+N:1324:Whispering shadow
+G:.:D
+I:120:30d10:35:50:50:150
+W:57:4:999:1250:0:0
+B:TOUCH:DARK(3d6):UNLIFE(2d6)
+B:TOUCH:DARK(3d6):UNLIFE(2d6)
+A:DARK(1d3)
+F:FRIENDS(1d2,20%) | EMPTY_MIND | BASH_DOOR |
+F:UNDEAD | EVIL | HURT_LITE | SELF_DARK_1 | SELF_DARK_2
+F:RES_POIS | RES_NETH | MULTIPLY | NASTY_GLYPH
+F:NO_CONF | NO_SLEEP | RES_COLD
+F:POS_GAIN_AC
+P:Copy:Spectre:Sorcerer
+P:Body:Wisp
+S:1_IN_10 | BA_DARK(5d5+30) | MULTIPLY
+D:A flickering darkness, spreading through the halls.
+D:From its midst, you hear faint sounds (voices?)
+D:yearning, beckoning.
+
+##penultimate normal boss of discordband
+##N:1325:MITZE, the Anime Pro
+
+
+##maybe steel dragons should evolve into this
+N:1326:Spire Dragon
+G:D:D
+I:135:100d93:50:250:99:2500
+W:86:6:999:30000:0:0
+B:CLAW:HURT(12d12)
+B:CLAW:HURT(12d12)
+B:BITE:HURT(14d14):CUT(5d14)
+B:CRUSH:HURT(17d17):HURT(17d17, 20%):STUN(4d4):PARALYZE
+A:SHARDS(3d5)
+F:FORCE_SLEEP | FORCE_MAXHP |
+F:DROP_4D2 | DROP_GOOD | DROP_GREAT 
+F:CAN_FLY | RIDING |
+F:SMART | BASH_DOOR | MOVE_BODY | KILL_WALL |
+F:RES_FIRE | RES_ELEC | RES_POIS | RES_SHAR |
+F:EVIL | DRAGON | NO_STUN | NO_CONF | NO_SLEEP
+F:DROP_CORPSE | POS_GAIN_AC
+P:Copy:Half-Titan:Berserker
+P:Life:90
+P:Body:Dragon
+P:Speed:+5
+S:FREQ_5 |
+S:THROW | BR_SHARDS
+D:A monstrous, coiled wyrm, patient and hateful. 
+D:Its hide, studded with spikes and crests and blades,
+D:turns aside steel and sorcery with equal ease.
+
+##this is a DL 90 unique pretending to be a DL 67 one
+##currently disabled due to his S_SPECIAL not being defined
+##he will drop latafayn, carlos will drop itself
+N:1327:Velniss the Red
+G:@:r
+I:135:65d80:10:220:255:50
+W:67:6:999:44444:0:0
+B:MOAN:SOUND(10d5):LOSE_WIS:CONFUSE:PARALYZE
+B:SLASH:HURT(35d2):ELEC(20d6):ICE(10d6):CUT(10d10)
+B:SLASH:FIRE(35d2):DISINTEGRATE(30d6):ICE(10d6)
+B:WAIL:SOUND(10d5):LOSE_CHR:LOSE_INT:SLOW
+F:OPEN_DOOR | GOOD | NO_CONF | NO_SLEEP | CAN_SPEAK |
+F:HAS_LITE_2 | RES_FIRE | RES_COLD | IM_ELEC | ELDRITCH_HORROR |
+F:AURA_FIRE | RES_ACID | NO_STUN | NO_FEAR | RES_TELE |
+F:SMART | DROP_GREAT | DROP_1D2 | DROP_2D2 | DROP_3D2 | REFLECTING |
+F:DROP_GOOD | DROP_4D2 | FRIENDLY | FORCE_MAXHP | HUMAN | MALE
+F:UNIQUE | NO_QUEST | RES_SOUN | RES_CHAO | RES_LITE | RES_DARK |
+F:POS_GAIN_AC | POS_SEE_INVIS | POS_HOLD_LIFE | RES_SHAR | RES_TIME | DEPRECATED
+P:Copy:High-Elf:Samurai
+P:Stats:-2:+3:-2:+7:+2:-4
+P:Skills:-20:-5:5:-9999:-20:0:40:-50
+P:Life:105
+P:SpellStat:Int
+P:Speed:+15
+S:1_IN_4
+S:S_SPECIAL | BA_FIRE(1d255+50) | BA_ELEC(10d10+120) | SCARE | CONFUSE |
+S:DISPEL_MAGIC | ANTI_MAGIC | JMP_DISINTEGRATE | HEAL | PSY_SPEAR | WORLD
+D:This inbred-looking wreck of a person wants everyone to know that
+D:he protects the weak, he is a hero given form, and that you should not steal. 
+D:Allegedly, he is a half-elf, half-demon who discovered his calling when
+D:he took a "certain" sword from his father's vault and "rejected" his
+D:"vile heritage" with a "power" it "granted". 
+D:He delivers devastating blows with the skill of an amateur,
+D:and attacks against him miss in wildly improbable ways, as if he was the protagonist
+D:in badly written fiction - that must win no matter how contrived the victory is. 
+
+N:1328:"Carlos Saura"
+G:|:y
+I:125:27d192:150:5:20:30
+W:67:80:999:27333:0:0
+B:WAIL(50):TERRIFY:STUN(3d3):CONFUSE
+B:SLASH:HURT(99d1):DRAIN_EXP(80d6):CUT(8d6)
+B:SLASH:HURT(99d1):DRAIN_EXP(80d6):CUT(8d6)
+B:SLASH:VAMP(10d8):HELL_FIRE(9d9)
+F:CHAR_MULTI | GOOD | IM_POIS | RES_COLD | RES_FIRE | RES_NETH | RES_CHAO |
+F:FORCE_SLEEP | UNIQUE | FORCE_MAXHP | CAN_FLY | NASTY_GLYPH |
+F:COLD_BLOOD | BASH_DOOR | NONLIVING | CAN_SPEAK | RES_ELEC | PASS_WALL |
+F:NO_CONF | NO_SLEEP | NO_FEAR | AURA_REVENGE | NONLIVING | NO_QUEST
+S:FREQ_1
+S:TELE_SELF
+D:A black runesword that thirsts for souls.
+D:It is not very pleased with its current owner.
+
+N:1329:Shalazar the Nightwalker
+G:W:v
+I:120:33d66:20:175:10:400
+W:56:4:999:23232:0:0
+B:CLAW:COLD(12d10)
+B:CLAW:COLD(12d10)
+B:GAZE:NETHER(10d10):DRAIN_EXP(40d6)
+F:FORCE_SLEEP | SMART | PASS_WALL | CAN_SWIM | BASH_DOOR | FORCE_MAXHP
+F:ONLY_ITEM | DROP_3D2 | DROP_2D2 | DROP_GOOD | COLD_BLOOD | OPEN_DOOR |
+F:EVIL | UNDEAD | RES_FIRE | RES_COLD | IM_POIS | RES_DARK | RES_TELE |
+F:HURT_LITE | RES_NETH | NO_CONF | NO_SLEEP | UNIQUE | NO_FEAR | RES_ACID
+F:POS_HOLD_LIFE | POS_SEE_INVIS | POS_GAIN_AC
+P:Copy:High-Elf:Weaponmaster
+S:1_IN_5 |
+S:BLIND | SCARE | BRAIN_SMASH | BA_DARK |
+S:BO_MANA | BA_FIRE |
+S:BR_NETHER | S_HI_UNDEAD | S_KIN
+D:Once upon a time, the wizard Shalazar tried to cause an undead incursion
+D:to harvest souls for the "Rupture", which would grant them unlife eternal
+D:in a form that even the mightiest jock in wizard school would tremble in fear at.
+D:The reality did not live up to the expectations, but he still gained power enough
+D:to worry the Z-listers. 
+
+N:1330:The Madness Dragon
+G:D:v
+I:130:108d121:25:130:30:500
+W:89:3:999:75000:0:0
+B:CLAW:HURT(8d9)
+B:CLAW:HURT(8d9)
+B:WAIL:CONFUSE(8d9):TERRIFY
+B:BITE:HURT(8d12):CHAOS(2d12):NETHER(2d12):CUT(5d12, 10%)
+F:FORCE_SLEEP | FORCE_MAXHP | REFLECTING | UNIQUE | RES_ELEC |
+F:ONLY_ITEM | DROP_2D2 | DROP_4D2 | CAN_FLY | ATTR_CLEAR
+F:RES_FIRE | OPEN_DOOR | BASH_DOOR | MOVE_BODY | RES_DARK |
+F:EVIL | DRAGON | RES_ACID | NO_CONF | RES_COLD | NO_SLEEP | RIDING
+F:DROP_CORPSE | POS_GAIN_AC | POS_SEE_INVIS | DROP_GREAT | 
+F:RES_CHAO | RES_NETH | AURA_FEAR | REGENERATE | PASS_WALL 
+P:Copy:Half-Titan:Beastmaster
+P:Body:Dragon
+S:FREQ_12 | CONFUSE | SCARE | DETECT_OBJECTS | BRAIN_SMASH
+S:BR_CHAOS | BR_NETHER | BR_INERTIA  | BA_DARK | BR_CONFUSION
+S:S_NIGHTMARE | BLIND | PARALYZE | SLOW | 
+S:BO_FIRE | BO_ELEC | DETECT_MONSTERS | MAPPING
+D:You try and convince yourself that it's just a meme, that
+D:it can't be beaten.
 
 # N: serial number : monster name
 # G: symbol : color
