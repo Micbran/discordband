@@ -4510,6 +4510,7 @@ extern int PlayerUID;
 #define MON_SPEC_TYRANNO        705
 #define MON_ENT                 708
 #define MON_HRU                 709
+#define MON_DEATHMOLD		711
 #define MON_FAFNER              712
 #define MON_GLAURUNG            715
 #define MON_G_BALROG            720
