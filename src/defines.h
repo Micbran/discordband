@@ -4784,6 +4784,32 @@ extern int PlayerUID;
 #define MON_JACK_LANTERN        1302
 #define MON_R_MACHINE           1303
 #define MON_Z_MANKELI		1304
+#define MON_ZU_AON		1306
+#define MON_HELLRAISER		1307
+#define MON_GCWADL		1309
+#define MON_GLACIAL_LEG		1319
+#define MON_ELANDAR		1321
+#define MON_ARGONIEL		1322
+#define MON_MITZE		1325
+#define MON_VELNISS		1327
+#define MON_CARLOS		1328
+#define MON_ENDGAMER		1331
+#define MON_SANSGAMER		1332
+#define MON_THATGAMER		1333
+#define MON_SJIJN		1334
+#define MON_ANDOR		1335
+#define MON_SUPERBALOR		1336
+#define MON_WAND_GROND		1337
+#define MON_DARKGOD		1338
+#define MON_DG_MINION		1339
+#define MON_EVIL_ADMIN		1340
+#define MON_MAD_BALANCER		1341
+#define MON_FCBUNNY		1342
+#define MON_BLACK_ENEMY		1343
+#define MON_SOMEONES_ALT		1347
+#define MON_HUGO		1349
+#define MON_CORN		1358
+#define MON_FAST_QUYLTHULG		1359
 /* The Metal Babble guards the Arena dungeon, but this requires the guardian to be a unique
    monster or the dungeon never gets flagged as completed. Note, this messes up the needle
    code in py_attack_aux() since the needle doesn't work on uniques, but I think I have
