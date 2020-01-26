@@ -15172,8 +15172,8 @@ I:130:75d100:80:110:10:1000
 W:92:2:999:40000:0:0
 B:CLAW:HURT(9d12)
 B:CLAW:HURT(9d12)
-B:BITE:POISON(25d12)
-B:BITE:POISON(25d12)
+B:BITE:POISON(15d12)
+B:BITE:POISON(15d12)
 F:UNIQUE | MALE | CAN_SPEAK |
 F:FORCE_SLEEP | FORCE_MAXHP | RAND_25 |
 F:ONLY_ITEM | DROP_1D2 | DROP_GOOD | AURA_FIRE |
@@ -21601,7 +21601,7 @@ S:1_IN_4 |
 S:BR_DARK | BR_CONF | BR_INERTIA | S_DEMON |
 D:The prince of evil.
 
-N:1195:Lucifer, Father of Lies
+N:1195:Lucifer, Prince of Darkness
 G:A:W
 I:140:192d100:50:242:25:235
 W:100:2:999:80586:0:0
@@ -21817,7 +21817,7 @@ F:ONLY_ITEM | DROP_1D2 | DROP_2D2 | DROP_GOOD | DROP_GREAT | UNIQUE |
 F:TAKE_ITEM | OPEN_DOOR | BASH_DOOR | SMART |
 F:DROP_SKELETON | DROP_CORPSE | POS_TELEPATHY | INVISIBLE
 S:1_IN_6
-S:HASTE | HEAL | BLINK | TELE_SELF | TELE_TO | DARKNESS | TRAPS
+S:HASTE | HEAL | BLINK | TELE_SELF | TELE_TO | DARKNESS | TRAPS | HAND_DOOM
 P:Copy:High-Elf:Rogue
 P:Skills:0:0:0:7:0:0:0:0
 P:Life:90
@@ -24779,7 +24779,7 @@ S:TELE_SELF | TELE_OTHER | BR_DISINTEGRATE(5%) | WORLD | HEAL(270) | HASTE
 D:A Tonberry of unusual speed, blundering around the dungeon with no finesse at all.
 D:He wields Sting, obtained in under thirty minutes from GAME START.
 D:He is writing down every item that he picks up
-D:and every stat he gains that happens for his character dump.
+D:and every stat gain that happens in his character dump.
 D:He would like to show you "The World".
 D:Who knows how many more iterations will die in the dank depths before
 D:recovering the legendary purple name?
