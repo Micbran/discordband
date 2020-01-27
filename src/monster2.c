@@ -1188,7 +1188,7 @@ bool mon_is_type(int r_idx, int type)
             return TRUE;
         else if (r_ptr->flags7 & RF7_NAZGUL)
             return TRUE;
-        else if (r_idx == MON_ANGMAR || r_idx == MON_HOARMURATH || r_idx == MON_DWAR || r_idx == MON_KHAMUL)
+        else if (r_idx == MON_ANGMAR || r_idx == MON_MOASSEMAN || r_idx == MON_DWAR || r_idx == MON_KHAMUL)
              return TRUE;
         else if (r_ptr->d_char == 'V' && r_idx != MON_ORIENTAL_VAMPIRE && r_idx != MON_STAR_VAMPIRE && r_idx != MON_FIRE_VAMPIRE)
             return TRUE;

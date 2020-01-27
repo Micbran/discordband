@@ -2554,7 +2554,73 @@ static void _summon_special(void)
             r_idx = MON_LESSER_KRAKEN;
         }
         break;
-
+    case MON_VELNISS:
+        if (_current.flags & MSC_SRC_PLAYER)
+            msg_print("You scream gibberish at your sword!");
+        else
+            msg_format("%s: Carlos! Fight with me now!", _current.name);
+        r_idx = MON_CARLOS;
+        break;
+    }
+    case MON_ENDGAMER:
+        if (_current.flags & MSC_SRC_PLAYER)
+            msg_print("You set up alternative accounts.");
+        else
+            msg_format("%s hides behind <color:v>Seven Proxies</color>.", _current.name);
+        r_idx = MON_SOMEONES_ALT;
+        break;
+    }
+    case MON_ANDOR:
+        if (_current.flags & MSC_SRC_PLAYER)
+            msg_print("You summon your servants!");
+        else
+            msg_format("%s summons his servants!", _current.name);
+        if (one_in_(3) && mon_available_num(&r_info[MON_WAND_GROND]) == 1)
+        {
+            num = 1;
+            r_idx = MON_WAND_GROND;
+        }
+        else if (one_in_(3))
+        {
+            num = randint1(2);
+            r_idx = MON_SUPERBALOR;
+        }
+        else
+            r_idx = MON_LORD_CHAOS;
+        break;
+    }
+        case MON_DARKGOD:
+        if (_current.flags & MSC_SRC_PLAYER)
+            msg_print("You summon your minions.");
+        else
+            msg_format("%s summons his minions.", _current.name);
+        if (one_in_(4) && mon_available_num(&r_info[MON_FCBUNNY]) == 1)
+        {
+            num = 1;
+            r_idx = MON_FCBUNNY;
+        }
+        else if (one_in_(4))
+        {
+            num = 1;
+            r_idx = MON_MAD_BALANCER;
+        }        
+	else if (one_in_(4))
+        {
+            num = 1;
+            r_idx = MON_EVIL_ADMIN;
+        }
+        else
+	    num = 5;
+            r_idx = MON_DG_MINION;
+        break;
+    }
+    case MON_OHMU:
+        if (_current.flags & MSC_SRC_PLAYER)
+            msg_print("You spawn molds.");
+        else
+            msg_format("%s spawns molds.", _current.name);
+        r_idx = MON_DEATHMOLD;
+        break;
     }
     for (i = 0; i < num; i++)
     {

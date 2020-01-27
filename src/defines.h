@@ -4460,7 +4460,7 @@ extern int PlayerUID;
 #define MON_FIRE_VAMPIRE 613
 #define MON_SEVEN_HEADED_HYDRA 614
 #define MON_MOIRE           615
-#define MON_KAVLAX        616
+#define MON_KERIAX        616
 #define MON_ELDRAK        620
 #define MON_ETTIN         621
 #define MON_NIGHTMARE     622
@@ -4510,6 +4510,7 @@ extern int PlayerUID;
 #define MON_SPEC_TYRANNO        705
 #define MON_ENT                 708
 #define MON_HRU                 709
+#define MON_DEATHMOLD		711
 #define MON_FAFNER              712
 #define MON_GLAURUNG            715
 #define MON_G_BALROG            720
@@ -4547,9 +4548,10 @@ extern int PlayerUID;
 #define MON_SARUMAN             771
 #define MON_GANDALF             772
 #define MON_BRAND               773
-#define MON_SHADOWLORD          774
+#define MON_DREADLORD          	774
 #define MON_GREATER_KRAKEN      775
 #define MON_ARCHLICH            776
+#define MON_CATLORD		777
 #define MON_CHAOS_HOUND         779
 #define MON_VLAD                780
 #define MON_ULT_BEHOLDER        781
@@ -4579,7 +4581,7 @@ extern int PlayerUID;
 #define MON_AETHER_HOUND        811
 #define MON_WARP_DEMON          812
 #define MON_ERIC                813
-#define MON_UNMAKER             815
+#define MON_WMOPC             	815
 #define MON_CYBER               816
 #define MON_KLING               819
 #define MON_CORWIN              820
@@ -4650,14 +4652,14 @@ extern int PlayerUID;
 #define MON_KENSHIROU           936
 #define MON_LEMS                937
 #define MON_W_KNIGHT            938
-#define MON_HOARMURATH          939
+#define MON_MOASSEMAN          	939
 #define MON_LESSER_BALROG       940
 #define MON_BONE_DRAGON         941
 #define MON_PLANETAR            942
 #define MON_SOLAR               943
-#define MON_BIKETAL             945
+#define MON_DAVIONDAEMON        945
 #define MON_RICH                948
-#define MON_IKETA               949
+#define MON_DAVION              949
 #define MON_B_DEATH_SWORD       953
 #define MON_BROKEN_DEATH_SWORD  953
 #define MON_YASE_HORSE          955
@@ -4782,7 +4784,33 @@ extern int PlayerUID;
 #define MON_DEATH_PUMPKIN       1300
 #define MON_JACK_LANTERN        1302
 #define MON_R_MACHINE           1303
-
+#define MON_Z_MANKELI		1304
+#define MON_ZU_AON		1306
+#define MON_HELLRAISER		1307
+#define MON_GCWADL		1309
+#define MON_GLACIAL_LEG		1319
+#define MON_ELANDAR		1321
+#define MON_ARGONIEL		1322
+#define MON_MITZE		1325
+#define MON_VELNISS		1327
+#define MON_CARLOS		1328
+#define MON_ENDGAMER		1331
+#define MON_SANSGAMER		1332
+#define MON_THATGAMER		1333
+#define MON_SJIJN		1334
+#define MON_ANDOR		1335
+#define MON_SUPERBALOR		1336
+#define MON_WAND_GROND		1337
+#define MON_DARKGOD		1338
+#define MON_DG_MINION		1339
+#define MON_EVIL_ADMIN		1340
+#define MON_MAD_BALANCER		1341
+#define MON_FCBUNNY		1342
+#define MON_BLACK_ENEMY		1343
+#define MON_SOMEONES_ALT		1347
+#define MON_HUGO		1349
+#define MON_CORN		1358
+#define MON_FAST_QUYLTHULG		1359
 /* The Metal Babble guards the Arena dungeon, but this requires the guardian to be a unique
    monster or the dungeon never gets flagged as completed. Note, this messes up the needle
    code in py_attack_aux() since the needle doesn't work on uniques, but I think I have

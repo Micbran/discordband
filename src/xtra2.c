@@ -1225,7 +1225,7 @@ void monster_death(int m_idx, bool drop_item)
         }
         break;
 
-    case MON_UNMAKER:
+    case MON_WMOPC:
         /* One more ultra-hack: An Unmaker goes out with a big bang! */
         {
             int flg = PROJECT_GRID | PROJECT_ITEM | PROJECT_KILL;
@@ -1357,7 +1357,7 @@ void monster_death(int m_idx, bool drop_item)
     case MON_ANGMAR:
     case MON_KHAMUL:
     case MON_DWAR:
-    case MON_HOARMURATH:
+    case MON_MOASSEMAN:
     {
         if (one_in_(3))
         {
@@ -1632,12 +1632,12 @@ void monster_death(int m_idx, bool drop_item)
             break;
 
         case MON_BRAND:
-            /*if (!one_in_(3))
+            if (!one_in_(3))
             {
                 a_idx = ART_BRAND;
                 chance = 25;
             }
-            else*/
+            else
             {
                 a_idx = ART_WEREWINDLE;
                 chance = 33;
@@ -1682,10 +1682,10 @@ void monster_death(int m_idx, bool drop_item)
             chance = 10;
             break;
 
-        /*case MON_MASTER_TONBERRY:
+        case MON_MASTER_TONBERRY:
             a_idx = ART_MASTER_TONBERRY;
             chance = 10;
-            break;*/
+            break;
 
         case MON_ZEUS:
             a_idx = ART_ZEUS;
@@ -2029,7 +2029,7 @@ void monster_death(int m_idx, bool drop_item)
             break;
         case MON_DESTROYER:
             a_idx = ART_DESTROYER;
-            chance = 0; /* RACE_MON_GOLEM only! */
+            chance = 20; /* RACE_MON_GOLEM only! */ /* Dude, have you seen the nerfs it has for non-golems? */
             break;
         case MON_VLAD:
             a_idx = ART_STONEMASK;
@@ -2037,7 +2037,7 @@ void monster_death(int m_idx, bool drop_item)
             break;
         case MON_ONE_RING:
             a_idx = ART_POWER;
-            chance = 5;
+            chance = 50;
             break;
         case MON_MULTIHUED_CENTIPEDE:
             a_idx = ART_MULTIHUED_CENTIPEDE;
@@ -2965,7 +2965,7 @@ bool mon_take_hit(int m_idx, int dam, int type, bool *fear, cptr note)
         }
 
         /* Mega hack : replace IKETA to BIKETAL */
-        if ((m_ptr->r_idx == MON_IKETA) &&
+        if ((m_ptr->r_idx == MON_DAVION) &&
             !(p_ptr->inside_arena || p_ptr->inside_battle))
         {
             int dummy_y = m_ptr->fy;
@@ -2977,9 +2977,9 @@ bool mon_take_hit(int m_idx, int dam, int type, bool *fear, cptr note)
             /* Delete the monster */
             delete_monster_idx(m_idx);
 
-            if (summon_named_creature(0, dummy_y, dummy_x, MON_BIKETAL, mode))
+            if (summon_named_creature(0, dummy_y, dummy_x, MON_DAVIONDAEMON, mode))
             {
-                msg_print("Uwa-hahaha!  *I* am Biketal!");
+                msg_print("As sun is sun, so will there be moon.");
             }
         }
         else
